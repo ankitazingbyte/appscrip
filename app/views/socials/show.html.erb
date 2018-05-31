@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @social.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @social.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @social.image %>
+</p>
+
+<%= link_to 'Edit', edit_social_path(@social) %> |
+<%= link_to 'Back', socials_path %>

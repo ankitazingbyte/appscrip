@@ -1,0 +1,199 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.navbar{
+  background-color: transparent !important;
+  position: relative;
+  padding: 0px -39px;
+  bottom: -15px;
+}
+
+.h-image{
+	width: 100%;
+  height: 600px;
+  margin: -72px 0px;
+}
+
+.subtitle {
+  font-size: 30px;
+}
+
+.fancy {
+  line-height: 0.5;
+  text-align: center;
+  padding: 100px;
+}
+
+.title {
+  padding: 52px;
+}
+
+/* section */
+a:hover,a:focus{
+  text-decoration: none;
+  outline: none;
+}
+
+.tab .nav-tabs{
+  border-bottom: 0 none;
+  background: transparent;
+}
+
+.tab .nav-tabs li a{
+  font-size: 16px;
+  color: #333;
+  background: transparent;
+  border: none;
+  padding: 12px 19px;
+  border-radius: 30px;
+  position: relative;
+}
+
+.tab .nav-tabs li.active a{
+  border: 0 none;
+  background: #ea3e4d;
+  color: #fff;
+}
+
+.tab .nav-tabs li.active a:after{
+  content: "";
+  position: absolute;
+  left: 45%;
+  bottom: -14px;
+  border: 7px solid transparent;
+  border-top: 7px solid #ea3e4c;
+}
+
+.tab .tab-content{
+  padding: 12px;
+  font-size: 14px;
+  color: #5a5c5d;
+  line-height: 24px;
+  margin-top: 20px;
+  background: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  .tab .nav-tabs li{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .tab .nav-tabs li a{
+    border: 1px solid #d3d3d3;
+  }
+  .tab .nav-tabs li.active a:after{
+    border:none;
+  }
+}
+
+/* CONTENT */
+.content{
+  background-color:pink;
+}
+
+/* FRONT TITLE*/
+.front-title{
+  color: white;
+  position: absolute;
+  margin: -375px 300px;
+}
+
+.btn-1{
+  height: 50px;
+  width: 152px;
+  margin: 114px 209px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  background: transparent;
+}
+
+.a-contact{
+  background: #ea3e4c;
+  height: 405px;
+  border-bottom-left-radius:45%;
+  border-bottom-right-radius:45%;
+}
+
+.b-contact{
+  background: #fff;
+  width:795px;
+  height: 500px;
+  position: relative;
+  top: -160px;
+  margin: -152px;
+}
+
+.form-control{
+  display: block;
+  width: 79%;
+  height: 0px;
+  padding: 25px 23px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.navbar a{
+  color: #ffffff;
+}
+
+.c-contact{
+  background: #fff;
+  width: 795px;
+  height: 500px;
+  position: relative;
+  top: -160px;
+  margin: 0px 219px;
+  box-shadow: 10px 10px 5px #9c9c9c;
+}
+
+.btn2{
+  background-color: #e93d4c;
+  border: none;
+  width: 219px;
+  height: 40px;
+  color: white;
+  border-radius: 12px;
+}
+
+.table{
+  padding: 5px 28px;
+  line-height: 4.428571;
+}
+
+.raise:hover,
+  .raise:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    -webkit-transform: translateY(-0.25em);
+    transform: translateY(-0.25em);
+}
+
+.raise {
+  --color:#484746;
+  --hover:#3a3333;
+}
+
+.div2 {
+    width: 300px;
+    height: 230px;    
+    padding: 50px;
+    border: 1px solid #dad3d3;
+    margin: 0 29px;
+}
