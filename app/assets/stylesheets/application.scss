@@ -197,3 +197,18 @@ a:hover,a:focus{
     border: 1px solid #dad3d3;
     margin: 0 29px;
 }
+
+.title2{
+  margin: -87px 477px 66px;
+  position: relative;
+  color:#fff;
+  top: -350px;
+}
+
+.thumbnail > img, .thumbnail a > img{
+  display: block;
+  max-width: 115px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}

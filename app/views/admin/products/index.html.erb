@@ -1,0 +1,26 @@
+<div class="container">
+  <center><h1>Product List</h1></center>
+    <div id="products" class="row list-group">
+      <div class="item  col-xs-4 col-lg-4">
+        <% @products.each do |product| %>
+          <div class="thumbnail">
+              <%= image_tag product.image.url, height: "140px" unless product.image.blank? %>
+              <div class="caption">
+                <h4 class="group inner list-group-item-heading"><%= product.title %></h4>
+                <p class="group inner list-group-item-text"><%= product.description %></p>
+                <div class="row">
+                  <div class="col-xs-12 col-md-6">
+                    <p class="lead">
+                      <%= link_to 'Show', admin_product_path(product) %></p>
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                      <%= link_to 'Edit', edit_admin_product_path(product) %>
+                      <%= link_to 'Destroy', admin_product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %>
+                  </div>
+                </div>
+              </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</div>

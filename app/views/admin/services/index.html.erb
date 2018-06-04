@@ -1,0 +1,26 @@
+<div class="container">
+  <center><h1>Service List</h1></center>
+    <div id="products" class="row list-group">
+      <% @services.each do |service| %>
+        <div class="item  col-xs-4 col-lg-4">
+          <div class="thumbnail">
+            <%= image_tag service.image.url, height: "114px" unless service.image.blank? %>
+            <div class="caption">
+              <h4 class="group inner list-group-item-heading"><%= service.title %></h4>
+              <p class="group inner list-group-item-text"><%= service.description %></p>
+              <div class="row">
+                <div class="col-xs-12 col-md-6">
+                  <p class="lead">
+                    <%= link_to 'Show', admin_service_path(service) %></p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <%= link_to 'Edit', edit_admin_service_path(service) %>
+                    <%= link_to 'Destroy', admin_service_path(service), method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</div>
