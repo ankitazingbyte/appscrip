@@ -14,16 +14,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+footer{
+  margin: 75px 0px;
+}
 .navbar{
   background-color: transparent !important;
   position: relative;
   padding: 0px -39px;
   bottom: -15px;
 }
+.navbar-nav > li > a:hover{
+  background-color: transparent !important;
+}
 
 .h-image{
 	width: 100%;
-  height: 600px;
+  height: 450px;
   margin: -72px 0px;
 }
 
@@ -108,7 +114,13 @@ a:hover,a:focus{
 .front-title{
   color: white;
   position: absolute;
-  margin: -375px 300px;
+  margin: -244px 300px;
+}
+
+.front-title2{
+  color: white;
+  position: absolute;
+  margin: -230px 420px;
 }
 
 .btn-1{
@@ -123,6 +135,7 @@ a:hover,a:focus{
 .a-contact{
   background: #ea3e4c;
   height: 405px;
+  margin: -140px;
   border-bottom-left-radius:45%;
   border-bottom-right-radius:45%;
 }
@@ -164,15 +177,24 @@ a:hover,a:focus{
   box-shadow: 10px 10px 5px #9c9c9c;
 }
 
-.btn2{
+.btn3{
   background-color: #e93d4c;
   border: none;
-  width: 219px;
-  height: 40px;
+  width: 280px;
+  height: 50px;
   color: white;
   border-radius: 12px;
+  font-size: 25px;
+  margin: 100px;
 }
-
+.btn2{
+  background-color: transparent;
+  border: 2px solid #e93d4b;
+  width: 219px;
+  height: 40px;
+  color: #e93d4b;
+  border-radius: 12px;
+}
 .table{
   padding: 5px 28px;
   line-height: 4.428571;
@@ -192,17 +214,26 @@ a:hover,a:focus{
 
 .div2 {
     width: 300px;
-    height: 230px;    
+    height: 300px;    
     padding: 50px;
     border: 1px solid #dad3d3;
-    margin: 0 29px;
+    margin: 27px 4px;
 }
 
 .title2{
-  margin: -87px 477px 66px;
+  margin: -100px 390px 66px;
   position: relative;
   color:#fff;
   top: -350px;
+  font-size: x-large;
+}
+.title3{
+  margin: -40px 280px 66px;
+  position: relative;
+  color:#fff;
+  top: -350px;
+  font-size: x-large;
+  text-align: -moz-center;
 }
 
 .thumbnail > img, .thumbnail a > img{
@@ -211,4 +242,42 @@ a:hover,a:focus{
   height: auto;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000000;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+    color: #000;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    background-color: #fff;
+    padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+.img-circle{
+  height: 130px;
+  width: 95px;
 }

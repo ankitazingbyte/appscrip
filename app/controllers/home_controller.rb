@@ -5,4 +5,8 @@ class HomeController < ApplicationController
 	def faq
 		@faqs = Faq.all
 	end
+	def about
+		@teams = Team.all
+	end
+
 end

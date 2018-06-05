@@ -1,0 +1,25 @@
+<div>
+  <%= image_tag "HomeHeader.jpg", class: "h-image" %>
+  <center><div class= "front-title2">
+    <h1>About Us</h1>
+    <h4>Creating The Next App-Reneuer</h4>
+  </div></center>
+</div><br><br><br><br><br>
+<center><h4> About Us </h4>
+<h1><%= image_tag "left.png" %>Our Story!<%= image_tag "right.png" %></h1></center>
+<div class="container"><center>Appscrip evolved from years of experience making mobility solutions and being a tech solution provider for startups as 3Embed. We soon realized that there was no specialized provider who can act as a technology partner for startups that are working on on-demand , social , discovery , messaging and shopping platforms and that brought about the whole idea that is APPSCRIP today. We have identified the common denominator to help the end platform owners save time and money and allow them to focus on their core product. They can draw comfort from the fact that the underlying technology (Prebuilt IP) is already driving successful platforms around the world.</center><br>
+<center>
+We are one of the only companies that provides full suite of services tailored to the on demand, social , discovery , messaging and shopping platforms. In the past months we have kick-started business’s like Rapido , Baxitaxi , Mober etc which have gone on to raise million dollar funds and we now continue to innovate and evolve to launch more successful business’s.</center></div><br><br><br>
+<center><p> Members </p>
+<h1><%= image_tag "left.png" %>Our Awesome Team!<%= image_tag "right.png" %></h1></center>
+<div class="container">
+  	<% @teams.each do |team| %>
+	  <div class="div2 raise col-md-3">
+	  	<center><%= image_tag team.image.url, class: "img-circle"%>
+	    <h3><%= team.name %></h3>
+	    <p><%= team.designation %></p></center>
+	  </div>
+  	<% end %>
+</div>
+<%= image_tag "testinomialbg.jpg", height:"360", width: "1300px;" %>
+<h1><%= image_tag "left.png" %>Some Interesting Fact about us<%= image_tag "right.png" %></h1>

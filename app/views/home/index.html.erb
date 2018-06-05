@@ -1,4 +1,12 @@
-<br>
+<div>
+  	<%= image_tag "HomeHeader.jpg", class: "h-image" %>
+	<div class= "front-title">
+	    <h1>Creating Technology Plateform to Help <br>
+	      Build and Scale your Business!</h1>
+	    <h4>Support your workflow with lightweight tools and features.</h4>
+	    <button type="button" class="btn-1">Learn More</button>
+	</div>
+</div><br><br><br><br>
 <div class="container">
     <div class="row">
         <div class="col-md-4">
@@ -7,7 +15,7 @@
         <div class="col-md-8">
         	<h2>We Build Appreneurs! <%= image_tag "right.png" %></h2>
         	<p>Appscrip brings all the popular business models like Social , On-demand, shopping, discovery, chat and booking at one place so you spend less time in organizing your technology and more time delighting your customers and growing your business. We’ve mastered the process of developing mobile first products for these business models and have spent countless hours understanding and dissecting each business model to create these good looking scalable mobile apps that can accelerate your business idea multi-fold and help you build the NEXT BIG WHAT!</p>
-        	<button type="button" class="btn2">Basic</button>
+        	<button type="button" class="btn3">Get Started Now</button>
         </div>
     </div>
 </div>
@@ -37,14 +45,22 @@
 								<div class="col-xs-8">
 								    <b><h2><%= demand.title %></h2></b><br>
 								    <%= demand.description %><br>
-								    <button type="button" class="btn2">Basic</button>
+								    <button type="button" class="btn2">View App Details</button>
 								</div>
 							</div>
 					    <% end %>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="Section2">
                         <h3>Section 2</h3>
-                        <p><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</h3></p>
+                        <p><div class="w3-content w3-display-container">
+							  <img class="mySlides" src="img_fjords.jpg" style="width:100%">
+							  <img class="mySlides" src="img_lights.jpg" style="width:100%">
+							  <img class="mySlides" src="img_mountains.jpg" style="width:100%">
+							  <img class="mySlides" src="img_forest.jpg" style="width:100%">
+							  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+							  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+							</div>
+						</p>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="Section3">
                         <h3>Section 3</h3>
@@ -93,6 +109,7 @@
 <div class="title2">
 	<%= image_tag "left.png" %>What Our Customers Have To Say<%= image_tag "right.png" %>
 </div>
+<p class= "title3">"these guys really helped a lot to build and maintain my product and had done a brilliant job! I am really happy with them!" </p>
 <div>
 	<div class= "a-contact"></div>
 	<center>
@@ -102,3 +119,23 @@
 		</div>
 	</center>
 </div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
