@@ -1,12 +1,11 @@
 <div>
   	<%= image_tag "HomeHeader.jpg", class: "h-image" %>
 	<div class= "front-title">
-	    <h1>Creating Technology Plateform to Help <br>
-	      Build and Scale your Business!</h1>
-	    <h4>Support your workflow with lightweight tools and features.</h4>
+	    <center><h1>Creating Technology Plateform to Help <br> Build and Scale your Business!</h1>
+	    <h4>Support your workflow with lightweight tools and features.</h4></center>
 	    <button type="button" class="btn-1">Learn More</button>
 	</div>
-</div><br><br><br><br>
+</div><br><br><br><br><br><br>
 <div class="container">
     <div class="row">
         <div class="col-md-4">
@@ -52,7 +51,7 @@
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="Section2">
                         <h3>Section 2</h3>
-                        <p><div class="w3-content w3-display-container">
+                        <p> <div class="w3-content w3-display-container">
 							  <img class="mySlides" src="img_fjords.jpg" style="width:100%">
 							  <img class="mySlides" src="img_lights.jpg" style="width:100%">
 							  <img class="mySlides" src="img_mountains.jpg" style="width:100%">
@@ -109,7 +108,8 @@
 <div class="title2">
 	<%= image_tag "left.png" %>What Our Customers Have To Say<%= image_tag "right.png" %>
 </div>
-<p class= "title3">"these guys really helped a lot to build and maintain my product and had done a brilliant job! I am really happy with them!" </p>
+<p class= "title3">"these guys really helped a lot to build and maintain my product and had done a brilliant job! I am really happy with them!"<br> </p>
+<span class="dot"><%= image_tag "icon.png", class: "img-circle" %></span>
 <div>
 	<div class= "a-contact"></div>
 	<center>
@@ -121,21 +121,21 @@
 </div>
 
 <script>
-var slideIndex = 1;
-showDivs(slideIndex);
+	var slideIndex = 1;
+	showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+	     x[i].style.display = "none";  
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	}
 </script>
