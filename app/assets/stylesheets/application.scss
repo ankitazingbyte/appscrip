@@ -1,7 +1,6 @@
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
- *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
  * vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
@@ -9,7 +8,6 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -123,6 +121,12 @@ a:hover,a:focus{
   margin: -210px 500px;
 }
 
+.front-title3{
+  color: white;
+  position: absolute;
+  margin: -220px 95px;
+}
+
 .btn-1{
   height: 50px;
   width: 152px;
@@ -145,8 +149,8 @@ a:hover,a:focus{
   width:795px;
   height: 500px;
   position: relative;
-  top: 0px;
-  margin: -152px;
+  top: -90px;
+  margin: -240px;
 }
 
 .form-control{
@@ -187,6 +191,7 @@ a:hover,a:focus{
   font-size: 25px;
   margin: 100px;
 }
+
 .btn2{
   background-color: transparent;
   border: 2px solid #e93d4b;
@@ -195,6 +200,7 @@ a:hover,a:focus{
   color: #e93d4b;
   border-radius: 12px;
 }
+
 .table{
   padding: 5px 28px;
   line-height: 4.428571;
@@ -227,6 +233,7 @@ a:hover,a:focus{
   top: -350px;
   font-size: x-large;
 }
+
 .title3{
   margin: -40px 280px 66px;
   position: relative;
@@ -261,20 +268,20 @@ a:hover,a:focus{
 
 /* On mouse-over */
 .sidenav a:hover, .dropdown-btn:hover {
-    color: #000;
+  color: #000;
 }
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
-    display: none;
-    background-color: #fff;
-    padding-left: 8px;
+  display: none;
+  background-color: #fff;
+  padding-left: 8px;
 }
 
 /* Optional: Style the caret down icon */
 .fa-caret-down {
-    float: right;
-    padding-right: 8px;
+  float: right;
+  padding-right: 8px;
 }
 
 .img-circle{
@@ -283,14 +290,14 @@ a:hover,a:focus{
 }
 
 .fact{
- margin: -300px 330px;
+ margin: -370px 330px;
  position: absolute;
  color: white;
 }
 
 .cust{
   position: absolute;
-  margin: -100px 300px;
+  margin: -221px 340px;
   color: white;
   h6{
   display: inline;
@@ -305,4 +312,43 @@ a:hover,a:focus{
   display: inline-block;
   position: absolute;
   margin: -345px 580px;
+}
+
+.div3{
+  padding: 139px 0px;
+}
+
+.heading{
+  position: relative;
+  margin: -160px 90px;
+  height: 410px;
+  top: -120px;
+  width: 220px;
+}
+
+.btnapp {
+  background: transparent;
+  border: 1px solid;
+  color: #fff;
+  padding: 13px 65px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 35px;
+}
+
+.btnapp2 {
+  background: #fff;
+  border: 1px solid;
+  color: #e93d4b;
+  padding: 14px 55px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 35px;
+  margin: -2px -200px;
+}
+
+.contact1{
+  margin: 184px 0px;
 }

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'home/faq'
   get 'home/about'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
+  get 'home/landing'
   namespace :admin do
     get 'dashboard/index'
     root 'dashboard#index'
