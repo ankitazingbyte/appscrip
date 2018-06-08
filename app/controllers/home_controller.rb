@@ -14,5 +14,8 @@ class HomeController < ApplicationController
 
 	def landing
 	end
+	
+	def howitwork
+	end
 
 end

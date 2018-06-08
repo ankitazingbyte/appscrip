@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   resources :teams
   devise_for :users
-  
   resources :contacts
   resources :ecommerces
   resources :socials
@@ -12,6 +11,7 @@ Rails.application.routes.draw do
   get 'home/about'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get 'home/landing'
+  get 'home/howitwork'
   namespace :admin do
     get 'dashboard/index'
     root 'dashboard#index'

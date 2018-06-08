@@ -127,6 +127,11 @@ a:hover,a:focus{
   margin: -220px 95px;
 }
 
+.front-title4{
+  color: white;
+  position: absolute;
+  margin: -160px 325px;
+}
 .btn-1{
   height: 50px;
   width: 152px;
@@ -153,6 +158,24 @@ a:hover,a:focus{
   margin: -240px;
 }
 
+.c-contact{
+  background: #fff;
+  width: 795px;
+  height: 500px;
+  position: relative;
+  top: -160px;
+  margin: 0px 219px;
+  box-shadow: 10px 10px 5px #9c9c9c;
+}
+
+.d-contact {
+  background: #fff;
+  width: 795px;
+  height: 500px;
+  position: relative;
+  top: 0px;
+  margin: -175px;
+}
 .form-control{
   display: block;
   width: 79%;
@@ -169,16 +192,6 @@ a:hover,a:focus{
 
 .navbar a{
   color: #ffffff;
-}
-
-.c-contact{
-  background: #fff;
-  width: 795px;
-  height: 500px;
-  position: relative;
-  top: -160px;
-  margin: 0px 219px;
-  box-shadow: 10px 10px 5px #9c9c9c;
 }
 
 .btn3{
@@ -351,4 +364,12 @@ a:hover,a:focus{
 
 .contact1{
   margin: 184px 0px;
+}
+
+.contact2 {
+    background: #ea3e4c;
+    height: 309px;
+    margin: 0px;
+    border-bottom-left-radius: 45%;
+    border-bottom-right-radius: 45%;
 }
