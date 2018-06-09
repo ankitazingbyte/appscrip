@@ -19,13 +19,13 @@
 	<h1><%= image_tag "left.png" %>Our Awesome Team!<%= image_tag "right.png" %></h1>
 </center>
 <div class="container">
-  	<%# @teams.each do |team| %>
+  	<% @teams.each do |team| %>
 	  <div class="div2 raise col-md-3">
-	  	<center><%#= image_tag team.image.url, class: "img-circle"%>
-	    <h3><%#= team.name %></h3>
-	    <p><%#= team.designation %></p></center>
+	  	<center><%= image_tag team.image.url, class: "img-circle"%>
+	    <h3><%= team.name %></h3>
+	    <p><%= team.designation %></p></center>
 	  </div>
-  	<%# end %>
+  	<% end %>
 </div>
 <div class="div3"><%= image_tag "testinomialbg.jpg", height:"360", width: "1300px;" %></div>
 <div class="fact"><h1><%= image_tag "left.png" %>Some Interesting Fact about us<%= image_tag "right.png" %></h1></div>
@@ -44,6 +44,6 @@
 	<div class= "a-contact"></div>
 	<div class= "b-contact"><br>
 		<h1><%= image_tag "left.png" %> Lets Contact With Us <%= image_tag "right.png" %></h1>
-		<%#= render "contacts/form" %>	
+		<%= render "admin/contacts/form" %>	
 	</div>
 </center>

@@ -1,11 +1,4 @@
 <div>
-  <%= image_tag "HomeHeader.jpg", class: "h-image" %>
-  <div class= "front-title">
-    <center><h1>Frequently Asked Questions</h1></center>
-    <h4>Drop use an email if you couldn't find an answer to your question here.</h4>
-  </div>
-</div><br><br><br><br><br>
-<div>
   <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -19,17 +12,17 @@
                 <!-- Tab panes -->
                 <div class="tab-content tabs col-sd-10">
                     <div role="tabpanel" class="tab-pane fade in active" id="Section1">
-                        <% @demands.each do |demand| %>
+                        <%# @demands.each do |demand| %>
                             <div class="row">
                                 <div class="col-xs-4">
-                                    <%= image_tag demand.image.url, height:"350px;" %>
+                                    <%#= image_tag demand.image.url, height:"350px;" %>
                                 </div>
                                 <div class="col-xs-8">
-                                    <b><h2><%= demand.title %></h2></b><br>
-                                         <%= demand.description %><br>
+                                    <b><h2><%#= demand.title %></h2></b><br>
+                                         <%#= demand.description %><br>
                                     <button type="button" class="btn2">Basic</button>
                             </div>
-                        <%end %>
+                        <%#end %>
                         </div>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="Section2">
@@ -45,12 +38,11 @@
         </div>
     </div>
 </div>
-<div>
   <div class= "a-contact"></div>
   <center>
     <div class= "b-contact"><br>
       <h1><%= image_tag "left.png" %> Lets Contact With Us <%= image_tag "right.png" %></h1>
-      <%= render "admin/contacts/form" %> 
+      <%#= render "contacts/form" %> 
     </div>
   </center>
 </div>

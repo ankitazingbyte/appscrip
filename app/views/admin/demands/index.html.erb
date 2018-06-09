@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Demands</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @demands.each do |demand| %>
+      <tr>
+        <td><%= demand.title %></td>
+        <td><%= demand.description %></td>
+        <td><%= image_tag demand.image.url %></td>
+        <td><%= link_to 'Show', admin_demand_url(demand) %></td>
+        <td><%= link_to 'Edit', edit_admin_demand_path(demand) %></td>
+        <td><%= link_to 'Destroy', admin_demand_url(demand), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Demand', new_admin_demand_path %>

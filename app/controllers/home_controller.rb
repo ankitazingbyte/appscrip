@@ -7,6 +7,7 @@ class HomeController < ApplicationController
 
 	def faq
 		@faqs = Faq.all
+		@demands = Demand.all
 		@contact = Contact.new
 	end
 
@@ -20,6 +21,9 @@ class HomeController < ApplicationController
 	end
 	
 	def howitwork
+		@contact = Contact.new
+	end
+	def contact
 		@contact = Contact.new
 	end
 
