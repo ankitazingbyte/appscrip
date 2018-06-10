@@ -11,42 +11,79 @@
         <div class="col-md-12">
             <div class="tab" role="tabpanel">
                 <!-- Nav tabs -->
-                <ul class="nav nav-tabs col-sd-2" role="tablist" style="display: table-caption;">
-                    <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">On Demand</a></li>
-                    <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Social And Messaging</a></li>
-                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">Booking And E-commerce</a></li>
-                </ul>
+                <div class="col-sm-3">
+                    <ul class="nav nav-tabs col-sd-2" role="tablist" style="display: table-caption;">
+                        <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">On Demand</a></li>
+                        <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Social And Messaging</a></li>
+                        <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">Booking And E-commerce</a></li>
+                    </ul>
+                </div>
                 <!-- Tab panes -->
-                <div class="tab-content tabs col-sd-10">
+                <div class="col-sm-9">
+                   <div class="tab-content tabs">
                     <div role="tabpanel" class="tab-pane fade in active" id="Section1">
-                        <% @demands.each do |demand| %>
-                            <div class="row">
+                        <%# @demands.each do |demand| %>
+                            <!-- <div class="row">
                                 <div class="col-xs-4">
-                                    <%= image_tag demand.image.url, height:"350px;" %>
+                                    <%#= image_tag demand.image.url, height:"350px;" %>
                                 </div>
                                 <div class="col-xs-8">
-                                    <b><h2><%= demand.title %></h2></b><br>
-                                         <%= demand.description %><br>
-                                    <button type="button" class="btn2">Basic</button>
+                                    <b><h2><%#= demand.title %></h2></b><br>
+                                    <%#= demand.description %><br>
+                                    <button type="button" class="btn2">View App Details</button>
+                                </div>
+                            </div> -->
+                        <%#end %>
+                        <div class="container">
+                            <div class="row">
+                                <div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel">
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner">
+                                        <% @demands.each_with_index do |demand, index| %>
+                                        <div class="item <%= index == 1 ? 'active'  : '' %>"> 
+                                            <div class="row">
+                                                <div class="col-sm-3 col-sm-offset-4">
+                                                    <div class="col-item">
+                                                        <div class="photo">
+                                                            <%= image_tag demand.image.url, height:"350px;" %>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <% end %>
+                                    </div>
+                                </div>
+                                <div class="row">    
+                                    <div class="col-md-3">
+                                        <!-- Controls -->
+                                        <div class="controls ">
+                                            <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-example-generic" data-slide="prev"></a>
+                                            <a class="right fa fa-chevron-right btn btn-primary" href="#carousel-example-generic" data-slide="next"></a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        <%end %>
                         </div>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="Section2">
                         <h3>Section 2</h3>
-                        <p><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</h3></p>
+                        <p>
+                        </p>
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="Section3">
                         <h3>Section 3</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<div class="clearfix"></div>
 <div>
-  <div class= "a-contact"></div>
+  <div class= "a-contact" style="margin: 0px !important;"></div>
   <center>
     <div class= "b-contact"><br>
       <h1><%= image_tag "left.png" %> Lets Contact With Us <%= image_tag "right.png" %></h1>

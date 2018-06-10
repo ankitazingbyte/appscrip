@@ -38,19 +38,50 @@
                 <!-- Tab panes -->
                 <div class="tab-content tabs">
                     <div role="tabpanel" class="tab-pane fade in active" id="Section1">
-                        <% @demands.each do |demand| %>
-		                	<div class="row">
+                        <%# @demands.each do |demand| %>
+		                	<!-- <div class="row">
 								<div class="col-xs-4">
-								    <%= image_tag demand.image.url, height:"350px;" %>
+								    <%#= image_tag demand.image.url, height:"350px;" %>
 								</div>
 								<div class="col-xs-8">
-								    <b><h2><%= demand.title %></h2></b><br>
-								    <%= demand.description %><br>
+								    <b><h2><%#= demand.title %></h2></b><br>
+								    <%#= demand.description %><br>
 								    <button type="button" class="btn2">View App Details</button>
 								</div>
-							</div>
-					    <% end %>
-                    </div>
+							</div> -->
+					    <%#end %>
+                    	<div class="container">
+						    <div class="row">
+						        <div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel">
+						            <!-- Wrapper for slides -->
+						            <div class="carousel-inner">
+						                <% @demands.each_with_index do |demand, index| %>
+						                <div class="item <%= index == 1 ? 'active'  : '' %>"> 
+						                    <div class="row">
+						                        <div class="col-sm-3 col-sm-offset-4">
+						                            <div class="col-item">
+						                                <div class="photo">
+						                                    <%= image_tag demand.image.url, height:"350px;" %>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>
+						                </div>
+						               	<% end %>
+						            </div>
+						        </div>
+						        <div class="row">    
+						            <div class="col-md-3">
+						                <!-- Controls -->
+						                <div class="controls hidden-xs">
+						                    <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-example-generic" data-slide="prev"></a>
+						                    <a class="right fa fa-chevron-right btn btn-primary" href="#carousel-example-generic" data-slide="next"></a>
+						                </div>
+						            </div>
+						        </div>
+						    </div>
+						</div>
+					</div>
                     <div role="tabpanel" class="tab-pane fade" id="Section2">
                         <h3>Section 2</h3>
                         <p> <div class="w3-content w3-display-container">
