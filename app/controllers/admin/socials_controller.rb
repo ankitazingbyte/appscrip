@@ -28,7 +28,7 @@ class Admin::SocialsController < Admin::AdminController
 
     respond_to do |format|
       if @social.save
-        format.html { redirect_to @social, notice: 'Social was successfully created.' }
+        format.html { redirect_to admin_faq_url(@social), notice: 'Social was successfully created.' }
         format.json { render :show, status: :created, location: @social }
       else
         format.html { render :new }

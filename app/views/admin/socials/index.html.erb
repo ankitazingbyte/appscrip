@@ -18,9 +18,9 @@
         <td><%= social.title %></td>
         <td><%= social.description %></td>
         <td><%= social.image %></td>
-        <td><%= link_to 'Show', social %></td>
-        <td><%= link_to 'Edit', edit_social_path(social) %></td>
-        <td><%= link_to 'Destroy', social, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', admin_social_url(social) %></td>
+        <td><%= link_to 'Edit', edit_admin_social_path(social) %></td>
+        <td><%= link_to 'Destroy', admin_social_url(social), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Social', new_social_path %>
+<%= link_to 'New Social', new_admin_social_path %>

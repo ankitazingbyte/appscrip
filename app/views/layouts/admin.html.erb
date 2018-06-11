@@ -45,10 +45,9 @@
       <div class="dropdown-container">
         <%= link_to "Demands", admin_demands_path %><br>
         <%= link_to "New demand", new_admin_demand_path %><br>
-        <%#= link_to "show product", product_path(@product) %><br>
-        <%#= link_to "edit product", edit_product_path(@product) %>
+        <%= link_to "show product", admin_product_path(:admin,@product) %><br>
+        <%= link_to "edit product", edit_admin_product_path(:admin, @product) %>
       </div>
-
       <button class="dropdown-btn">Team 
         <i class="fa fa-caret-down"></i>
       </button>
@@ -59,12 +58,22 @@
         <%#= link_to "edit product", edit_product_path(@product) %>
       </div>
 
-      <button class="dropdown-btn">Demand 
+      <button class="dropdown-btn">social
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-container">
-        <%= link_to "Demands", admin_demands_path %><br>
-        <%= link_to "New demand", new_admin_demand_path %><br>
+        <%= link_to "socials", admin_socials_path %><br>
+        <%= link_to "New social", new_admin_social_path %><br>
+        <%#= link_to "show product", product_path(@product) %><br>
+        <%#= link_to "edit product", edit_product_path(@product) %>
+      </div>
+
+      <button class="dropdown-btn">Ecommerce
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <%= link_to "Ecommerces", admin_ecommerces_path %><br>
+        <%= link_to "New ecommerce", new_admin_ecommerce_path %><br>
         <%#= link_to "show product", product_path(@product) %><br>
         <%#= link_to "edit product", edit_product_path(@product) %>
       </div>

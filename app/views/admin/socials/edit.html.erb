@@ -1,6 +1,6 @@
-<h1>Editing Social</h1>
-
-<%= render 'form', social: @social %>
-
-<%= link_to 'Show', @social %> |
-<%= link_to 'Back', socials_path %>
+<div class="container">
+	<h1>Editing Social</h1>
+	<%= render 'form', social: @social %>
+	<%= link_to 'Show', admin_social_url(@social) %> |
+	<%= link_to 'Back', admin_socials_path %>
+</div>

@@ -28,7 +28,7 @@ class Admin::EcommercesController < Admin::AdminController
 
     respond_to do |format|
       if @ecommerce.save
-        format.html { redirect_to @ecommerce, notice: 'Ecommerce was successfully created.' }
+        format.html { redirect_to admin_ecommerce_url(@ecommerce), notice: 'Ecommerce was successfully created.' }
         format.json { render :show, status: :created, location: @ecommerce }
       else
         format.html { render :new }

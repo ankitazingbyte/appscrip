@@ -3,6 +3,9 @@ class HomeController < ApplicationController
 	def index
 		@demands = Demand.all
 		@contact = Contact.new
+		@socials = Social.all
+		@ecommerces = Ecommerce.all
+		@customers = Customer.all
 	end
 
 	def faq

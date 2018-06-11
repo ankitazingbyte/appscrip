@@ -18,9 +18,9 @@
         <td><%= ecommerce.title %></td>
         <td><%= ecommerce.description %></td>
         <td><%= ecommerce.image %></td>
-        <td><%= link_to 'Show', ecommerce %></td>
-        <td><%= link_to 'Edit', edit_ecommerce_path(ecommerce) %></td>
-        <td><%= link_to 'Destroy', ecommerce, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', admin_ecommerce_url(ecommerce) %></td>
+        <td><%= link_to 'Edit', edit_admin_ecommerce_path(ecommerce) %></td>
+        <td><%= link_to 'Destroy', admin_ecommerce_url(ecommerce), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Ecommerce', new_ecommerce_path %>
+<%= link_to 'New Ecommerce', new_admin_ecommerce_path %>

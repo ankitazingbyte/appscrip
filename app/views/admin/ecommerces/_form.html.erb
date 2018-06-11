@@ -1,4 +1,4 @@
-<%= form_for @ecommerce do |form| %>
+<%= form_for([:admin,@ecommerce]) do |form| %>
   <% if ecommerce.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(ecommerce.errors.count, "error") %> prohibited this ecommerce from being saved:</h2>
@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title %><br>
     <%= form.text_field :title, id: :ecommerce_title %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label :description %><br>
     <%= form.text_field :description, id: :ecommerce_description %>
   </div>
 
   <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image, id: :ecommerce_image %>
+    <%= form.label :image %><br>
+    <%= form.file_field :image, id: :ecommerce_image %>
   </div>
 
   <div class="actions">

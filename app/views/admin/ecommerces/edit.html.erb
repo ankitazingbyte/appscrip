@@ -1,6 +1,6 @@
-<h1>Editing Ecommerce</h1>
-
-<%= render 'form', ecommerce: @ecommerce %>
-
-<%= link_to 'Show', @ecommerce %> |
-<%= link_to 'Back', ecommerces_path %>
+<div class="container">	
+	<h1>Editing Ecommerce</h1>
+	<%= render 'form', ecommerce: @ecommerce %>
+	<%= link_to 'Show', admin_service_path(@ecommerce) %> |
+	<%= link_to 'Back', admin_ecommerces_path %>
+</div>
