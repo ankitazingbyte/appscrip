@@ -142,7 +142,7 @@ a:hover,a:focus{
 .btn-1{
   height: 50px;
   width: 152px;
-  margin: 114px 209px;
+  margin: 85px 209px;
   border: 2px solid #fff;
   border-radius: 25px;
   background: transparent;
@@ -176,7 +176,6 @@ a:hover,a:focus{
   color: #67656bcc;
   border-radius: 12px;
 } 
-
 
 .a-contact{
   background: #ea3e4c;
@@ -213,6 +212,7 @@ a:hover,a:focus{
   top: 0px;
   margin: -175px;
 }
+
 .form-control{
   display: block;
   width: 79%;
@@ -253,7 +253,7 @@ a:hover,a:focus{
   height: 245px;    
   padding: 26px;
   border: 1px solid #ececec;
-  margin: 17px 0px;
+  margin: 17px 45px;
 }
 
 .title2{
@@ -433,5 +433,42 @@ a:hover,a:focus{
 } 
 
 .car1{
-  
+  height: 550px;
+  width: 100%;
+}
+
+/* carousle*/
+.a1 {
+  height: 410px;
+  width: 100%;
+}
+
+#carousel-container {
+  background-image:'testinomialbg.jpg' no-repeat;
+  height: 550px;
+}
+carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    width: 80%;
+    /* left: 50%; */
+    margin-left: 10%;
+    margin-top:10%;
+    margin-bottom:10%;
+    height: auto;
+}
+
+#homecarousel {
+    position:relative;
+    background: url('testinomialbg.jpg');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    color: white;
+    width: 100%;
+} 
+
+.carousel-indicators .active {
+  background-color: #ea3e4c;
 }

@@ -38,7 +38,7 @@ class Admin::ContactsController < Admin::AdminController
   def update
     respond_to do |format|
       if @contact.update(contact_params)
-        format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
+        format.html { redirect_to admin_contact_url(@contact), notice: 'Contact was successfully updated.' }
         format.json { render :show, status: :ok, location: @contact }
       else
         format.html { render :edit }
@@ -52,7 +52,7 @@ class Admin::ContactsController < Admin::AdminController
   def destroy
     @contact.destroy
     respond_to do |format|
-      format.html { redirect_to contacts_url, notice: 'Contact was successfully destroyed.' }
+      format.html { redirect_to admin_contacts_url, notice: 'Contact was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

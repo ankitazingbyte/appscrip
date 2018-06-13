@@ -48,6 +48,15 @@
         <%= link_to "show product", admin_product_path(:admin,@product) %><br>
         <%= link_to "edit product", edit_admin_product_path(:admin, @product) %>
       </div>
+      <button class="dropdown-btn">Customer 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <%= link_to "Customers", admin_customers_path %><br>
+        <%= link_to "New Customer", new_admin_customer_path %><br>
+        <%= link_to "Show Customer", admin_customer_path(:admin,@customer) %><br>
+        <%= link_to "Edit Customer", edit_admin_customer_path(:admin, @customer) %>
+      </div>
       <button class="dropdown-btn">Team 
         <i class="fa fa-caret-down"></i>
       </button>

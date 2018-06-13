@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :customers
   devise_for :users
   get 'home/index'
   root 'home#index'
@@ -12,6 +11,7 @@ Rails.application.routes.draw do
     get 'dashboard/index'
     root 'dashboard#index'
     resources :faqs
+    resources :customers
     resources :products
     resources :services
     resources :contacts

@@ -42,7 +42,7 @@ class Admin::EcommercesController < Admin::AdminController
   def update
     respond_to do |format|
       if @ecommerce.update(ecommerce_params)
-        format.html { redirect_to @ecommerce, notice: 'Ecommerce was successfully updated.' }
+        format.html { redirect_to admin_ecommerce_url(@ecommerce), notice: 'Ecommerce was successfully updated.' }
         format.json { render :show, status: :ok, location: @ecommerce }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class Admin::EcommercesController < Admin::AdminController
   def destroy
     @ecommerce.destroy
     respond_to do |format|
-      format.html { redirect_to ecommerces_url, notice: 'Ecommerce was successfully destroyed.' }
+      format.html { redirect_to admin_ecommerces_url, notice: 'Ecommerce was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
