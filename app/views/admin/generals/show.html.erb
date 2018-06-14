@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @general.question %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @general.answer %>
+</p>
+
+<%= link_to 'Edit', edit_general_path(@general) %> |
+<%= link_to 'Back', generals_path %>

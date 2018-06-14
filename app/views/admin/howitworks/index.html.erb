@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Howitworks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title1</th>
+      <th>Title2</th>
+      <th>Heading</th>
+      <th>Body</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @howitworks.each do |howitwork| %>
+      <tr>
+        <td><%= howitwork.title1 %></td>
+        <td><%= howitwork.title2 %></td>
+        <td><%= howitwork.heading %></td>
+        <td><%= howitwork.body %></td>
+        <td><%= howitwork.image %></td>
+        <td><%= link_to 'Show', howitwork %></td>
+        <td><%= link_to 'Edit', edit_howitwork_path(howitwork) %></td>
+        <td><%= link_to 'Destroy', howitwork, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Howitwork', new_howitwork_path %>

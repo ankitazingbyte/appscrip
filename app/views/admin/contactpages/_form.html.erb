@@ -1,0 +1,42 @@
+<%= form_with(model: contactpage, local: true) do |form| %>
+  <% if contactpage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contactpage.errors.count, "error") %> prohibited this contactpage from being saved:</h2>
+
+      <ul>
+      <% contactpage.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :contactpage_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subtitle %>
+    <%= form.text_field :subtitle, id: :contactpage_subtitle %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, id: :contactpage_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :contactpage_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mail %>
+    <%= form.text_field :mail, id: :contactpage_mail %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

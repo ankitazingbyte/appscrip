@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Aboutus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Heading1</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aboutus.each do |aboutu| %>
+      <tr>
+        <td><%= aboutu.title %></td>
+        <td><%= aboutu.heading1 %></td>
+        <td><%= aboutu.body %></td>
+        <td><%= link_to 'Show', admin_aboutu_path(aboutu) %></td>
+        <td><%= link_to 'Edit', edit_admin_aboutu_path(aboutu) %></td>
+        <td><%= link_to 'Destroy', admin_aboutu_path(aboutu), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aboutu', new_admin_aboutu_path %>

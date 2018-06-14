@@ -1,0 +1,2 @@
+module FontpagesHelper
+end

@@ -1,10 +1,12 @@
-<div>
-  <%= image_tag "HomeHeader.jpg", class: "h-image" %>
-  <div class= "front-title5">
-    <center><h1>Frequently Asked Questions</h1></center>
-    <h4>Drop use an email if you couldn't find an answer to your question here.</h4>
-  </div>
-</div><br><br><br><br><br>
+<% @faqs.each do |faq| %>
+  <div>
+    <%= image_tag "HomeHeader.jpg", class: "h-image" %>
+    <div class= "front-title5">
+      <center><h1><%= faq.title %></h1></center>
+      <h4><%= faq.subtitle %></h4>
+    </div>
+  </div><br><br><br><br><br>
+<% end %>
 <div>
   <div class="container">
     <div class="row">
@@ -25,62 +27,22 @@
                             <h3>General<%= image_tag "right.png" %></h3>
                             <div class="wrapper center-block">
                                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                  <% @generals.each do |general| %>
                                     <div class="panel panel-default">
                                         <div class="panel-heading active" role="tab" id="headingOne">
                                           <h4 class="panel-title">
                                             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                             Can I use Appscrip's app for free?
+                                             <%= general.question %>
                                             </a>
                                           </h4>
                                         </div>
                                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                             <div class="panel-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                <%= general.answer %>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingTwo">
-                                          <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                             Can I cancle my subscription?
-                                            </a>
-                                          </h4>
-                                        </div>
-                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                            <div class="panel-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingThree">
-                                          <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                              Can I cancle my subscription?
-                                            </a>
-                                          </h4>
-                                        </div>
-                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                              <div class="panel-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                              </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingFour">
-                                          <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                              Is this a secure site for purchases?
-                                            </a>
-                                          </h4>
-                                        </div>
-                                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                                              <div class="panel-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                              </div>
-                                        </div>
-                                    </div>
+                                  <% end %>
                                 </div>
                             </div>
                         </div>

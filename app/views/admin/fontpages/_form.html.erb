@@ -1,0 +1,42 @@
+<%= form_for([:admin, @fontpage]) do |form| %>
+  <% if fontpage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fontpage.errors.count, "error") %> prohibited this fontpage from being saved:</h2>
+
+      <ul>
+      <% fontpage.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title1 %><br>
+    <%= form.text_field :title1, id: :fontpage_title1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title2 %><br>
+    <%= form.text_field :title2, id: :fontpage_title2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %><br>
+    <%= form.file_field :image, id: :fontpage_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :heading %><br>
+    <%= form.text_field :heading, id: :fontpage_heading %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %><br>
+    <%= form.text_field :body, id: :fontpage_body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

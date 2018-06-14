@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @aboutu.title %>
+</p>
+
+<p>
+  <strong>Heading1:</strong>
+  <%= @aboutu.heading1 %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @aboutu.body %>
+</p>
+
+<%= link_to 'Edit', edit_admin_aboutu_path(@aboutu) %> |
+<%= link_to 'Back', admin_aboutus_path %>

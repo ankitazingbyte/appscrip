@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180611113527) do
+ActiveRecord::Schema.define(version: 20180614115714) do
+
+  create_table "aboutus", force: :cascade do |t|
+    t.string "title"
+    t.string "heading1"
+    t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contactpages", force: :cascade do |t|
+    t.string "title"
+    t.string "subtitle"
+    t.string "phone"
+    t.string "address"
+    t.string "mail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.string "full_name"
@@ -46,6 +64,45 @@ ActiveRecord::Schema.define(version: 20180611113527) do
   end
 
   create_table "faqs", force: :cascade do |t|
+    t.string "title"
+    t.string "subtitle"
+  end
+
+  create_table "fontpages", force: :cascade do |t|
+    t.string "title1"
+    t.string "title2"
+    t.string "image"
+    t.string "heading"
+    t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "generals", force: :cascade do |t|
+    t.string "question"
+    t.string "answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "howitworks", force: :cascade do |t|
+    t.string "title1"
+    t.string "title2"
+    t.string "heading"
+    t.string "body"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "licences", force: :cascade do |t|
+    t.string "question"
+    t.string "answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "payments", force: :cascade do |t|
     t.string "question"
     t.string "answer"
     t.datetime "created_at", null: false

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fontpages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title1</th>
+      <th>Title2</th>
+      <th>Image</th>
+      <th>Heading</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fontpages.each do |fontpage| %>
+      <tr>
+        <td><%= fontpage.title1 %></td>
+        <td><%= fontpage.title2 %></td>
+        <td><%= fontpage.image %></td>
+        <td><%= fontpage.heading %></td>
+        <td><%= fontpage.body %></td>
+        <td><%= link_to 'Show', admin_fontpage_path(fontpage) %></td>
+        <td><%= link_to 'Edit', edit_admin_fontpage_path(fontpage) %></td>
+        <td><%= link_to 'Destroy', admin_fontpage_url(fontpage), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fontpage', new_admin_fontpage_path %>

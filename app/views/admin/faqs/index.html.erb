@@ -1,48 +1,29 @@
-<div>
-  <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="tab" role="tabpanel">
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs col-sd-2" role="tablist" style="display: table-caption;">
-                    <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">On Demand</a></li>
-                    <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Social And Messaging</a></li>
-                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">Booking And E-commerce</a></li>
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content tabs col-sd-10">
-                    <div role="tabpanel" class="tab-pane fade in active" id="Section1">
-                        <%# @demands.each do |demand| %>
-                            <div class="row">
-                                <div class="col-xs-4">
-                                    <%#= image_tag demand.image.url, height:"350px;" %>
-                                </div>
-                                <div class="col-xs-8">
-                                    <b><h2><%#= demand.title %></h2></b><br>
-                                         <%#= demand.description %><br>
-                                    <button type="button" class="btn2">Basic</button>
-                            </div>
-                        <%#end %>
-                        </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="Section2">
-                        <h3>Section 2</h3>
-                        <p><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</h3></p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="Section3">
-                        <h3>Section 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-  <div class= "a-contact"></div>
-  <center>
-    <div class= "b-contact"><br>
-      <h1><%= image_tag "left.png" %> Lets Contact With Us <%= image_tag "right.png" %></h1>
-      <%#= render "contacts/form" %> 
-    </div>
-  </center>
-</div>
+<p id="notice"><%= notice %></p>
+
+<h1>Faq</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>SubTitle</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @faqs.each do |faq| %>
+      <tr>
+        <td><%= faq.title %></td>
+        <td><%= faq.subtitle %></td>
+        <td><%= link_to 'Show', admin_faq_path(faq) %></td>
+        <td><%= link_to 'Edit', edit_admin_faq_path(faq) %></td>
+        <td><%= link_to 'Destroy', admin_faq_url(faq), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fontpage', new_admin_faq_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title1:</strong>
+  <%= @howitwork.title1 %>
+</p>
+
+<p>
+  <strong>Title2:</strong>
+  <%= @howitwork.title2 %>
+</p>
+
+<p>
+  <strong>Heading:</strong>
+  <%= @howitwork.heading %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @howitwork.body %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @howitwork.image %>
+</p>
+
+<%= link_to 'Edit', edit_howitwork_path(@howitwork) %> |
+<%= link_to 'Back', howitworks_path %>

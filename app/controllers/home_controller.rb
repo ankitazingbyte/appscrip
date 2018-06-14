@@ -6,17 +6,22 @@ class HomeController < ApplicationController
 		@socials = Social.all
 		@ecommerces = Ecommerce.all
 		@customers = Customer.all
+		@fontpages = Fontpage.all
 	end
 
 	def faq
 		@faqs = Faq.all
 		@demands = Demand.all
 		@contact = Contact.new
+		@generals = General.all
+		@licences = Licence.all
+		@payments = Payment.all
 	end
 
 	def about
 		@teams = Team.all
 		@contact = Contact.new
+		@aboutus = Aboutu.all
 	end
 
 	def landing

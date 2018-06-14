@@ -1,0 +1,27 @@
+<%= form_with(model: general, local: true) do |form| %>
+  <% if general.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(general.errors.count, "error") %> prohibited this general from being saved:</h2>
+
+      <ul>
+      <% general.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :question %>
+    <%= form.text_field :question, id: :general_question %>
+  </div>
+
+  <div class="field">
+    <%= form.label :answer %>
+    <%= form.text_field :answer, id: :general_answer %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

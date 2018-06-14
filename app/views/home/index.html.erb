@@ -1,25 +1,28 @@
-<div>
-  	<%= image_tag "HomeHeader.jpg", class: "h-image" %>
-	<div class= "front-title">
-	    <center>
-	    	<h1>Creating Technology Plateform to Help <br> Build and Scale your Business!</h1>
-	    	<h4>Support your workflow with lightweight tools and features.</h4>
-		</center>
-	    <button type="button" class="btn-1">Learn More</button>
+<% @fontpages.each do |fontpage| %>
+	<div>
+	  	<%= image_tag "HomeHeader.jpg", class: "h-image" %>
+
+		<div class= "front-title">
+		    <center>
+		    	<h1><%= fontpage.title1 %></h1>
+		    	<h4><%= fontpage.title2 %></h4>
+			</center>
+		    <button type="button" class="btn-1">Learn More</button>
+		</div>
+	</div><br><br><br><br><br><br>
+	<div class="container">
+	    <div class="row">
+	        <div class="col-md-4">
+	        	<%= image_tag fontpage.image.url, width: "300px"%>
+	        </div>
+	        <div class="col-md-8">
+	        	<h2><%= fontpage.heading %>!<%= image_tag "right.png" %></h2>
+	        	<p><%= fontpage.body %></p>
+	        	
+	        </div>
+	    </div>
 	</div>
-</div><br><br><br><br><br><br>
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-        	<%= image_tag "phone.png", width: "300px"%>
-        </div>
-        <div class="col-md-8">
-        	<h2>We Build Appreneurs! <%= image_tag "right.png" %></h2>
-        	<p>Appscrip brings all the popular business models like Social, On-demand, shopping, discovery, chat and booking at one place so you spend less time in organizing your technology and more time delighting your customers and growing your business. We’ve mastered the process of developing mobile first products for these business models and have spent countless hours understanding and dissecting each business model to create these good looking scalable mobile apps that can accelerate your business idea multi-fold and help you build the NEXT BIG WHAT!</p>
-        	<button type="button" class="btn3">Get Started Now</button>
-        </div>
-    </div>
-</div>
+ <% end %>
 <div class="fancy">
 	<h1><%= image_tag "left.png" %>Bussiness Model We Fuel!<%= image_tag "right.png" %></h1>
 </div>
