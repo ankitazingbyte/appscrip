@@ -16,9 +16,9 @@
       <tr>
         <td><%= licence.question %></td>
         <td><%= licence.answer %></td>
-        <td><%= link_to 'Show', licence %></td>
-        <td><%= link_to 'Edit', edit_licence_path(licence) %></td>
-        <td><%= link_to 'Destroy', licence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', admin_licence_path(licence) %></td>
+        <td><%= link_to 'Edit', edit_admin_licence_path(licence) %></td>
+        <td><%= link_to 'Destroy', admin_licence_path(licence), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Licence', new_licence_path %>
+<%= link_to 'New Licence', new_admin_licence_path %>

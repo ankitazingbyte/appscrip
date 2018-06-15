@@ -1,4 +1,4 @@
-<%= form_with(model: general, local: true) do |form| %>
+<%= form_for([:admin, @general]) do |form| %>
   <% if general.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(general.errors.count, "error") %> prohibited this general from being saved:</h2>
@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :question %>
+    <%= form.label :question %><br>
     <%= form.text_field :question, id: :general_question %>
   </div>
 
   <div class="field">
-    <%= form.label :answer %>
+    <%= form.label :answer %><br>
     <%= form.text_field :answer, id: :general_answer %>
   </div>
 

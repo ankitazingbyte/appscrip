@@ -1,4 +1,4 @@
-<%= form_with(model: licence, local: true) do |form| %>
+<%= form_for([:admin, @licence]) do |form| %>
   <% if licence.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(licence.errors.count, "error") %> prohibited this licence from being saved:</h2>
@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :question %>
+    <%= form.label :question %><br>
     <%= form.text_field :question, id: :licence_question %>
   </div>
 
   <div class="field">
-    <%= form.label :answer %>
+    <%= form.label :answer %><br>
     <%= form.text_field :answer, id: :licence_answer %>
   </div>
 

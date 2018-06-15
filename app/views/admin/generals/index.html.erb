@@ -16,9 +16,9 @@
       <tr>
         <td><%= general.question %></td>
         <td><%= general.answer %></td>
-        <td><%= link_to 'Show', general %></td>
-        <td><%= link_to 'Edit', edit_general_path(general) %></td>
-        <td><%= link_to 'Destroy', general, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', admin_general_path(general) %></td>
+        <td><%= link_to 'Edit', edit_admin_general_path(general) %></td>
+        <td><%= link_to 'Destroy', admin_general_url(general), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New General', new_general_path %>
+<%= link_to 'New General', new_admin_general_path %>
