@@ -30,6 +30,7 @@ class HomeController < ApplicationController
 	
 	def howitwork
 		@contact = Contact.new
+		@howitworks = Howitwork.all
 	end
 	def contact
 		@contact = Contact.new

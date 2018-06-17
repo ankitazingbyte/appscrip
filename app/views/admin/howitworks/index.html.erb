@@ -22,9 +22,9 @@
         <td><%= howitwork.heading %></td>
         <td><%= howitwork.body %></td>
         <td><%= howitwork.image %></td>
-        <td><%= link_to 'Show', howitwork %></td>
-        <td><%= link_to 'Edit', edit_howitwork_path(howitwork) %></td>
-        <td><%= link_to 'Destroy', howitwork, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', admin_howitwork_url(howitwork) %></td>
+        <td><%= link_to 'Edit', edit_admin_howitwork_path(howitwork) %></td>
+        <td><%= link_to 'Destroy', admin_howitwork_url(howitwork), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Howitwork', new_howitwork_path %>
+<%= link_to 'New Howitwork', new_admin_howitwork_path %>
