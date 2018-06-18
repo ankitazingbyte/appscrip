@@ -1,3 +1,11 @@
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <h1>LETS CREATE SOMETHING TOGETHER</h1><br><br>
+    <h3>SEND US A MESSAGE</h3>
+   <center><%= render "admin/contacts/form" %></center>
+  </div>
+</div>
 <% @fontpages.each do |fontpage| %>
 	<div>
 	  	<%= image_tag "HomeHeader.jpg", class: "h-image" %>
@@ -18,11 +26,11 @@
 	        <div class="col-md-8">
 	        	<h2><%= fontpage.heading %>!<%= image_tag "right.png" %></h2>
 	        	<p><%= fontpage.body %></p>
-	        	
+	        	<button type="button" class="btn3"><span style="font-size:30px;cursor:pointer" onclick="openNav()">Get Started Now</span></button>
 	        </div>
 	    </div>
 	</div>
- <% end %>
+<% end %>
 <div class="fancy">
 	<h1><%= image_tag "left.png" %>Bussiness Model We Fuel!<%= image_tag "right.png" %></h1>
 </div>
@@ -215,4 +223,13 @@
 	  }
 	  // x[slideIndex-1].style.display = "block";  
 	}
+</script>
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
 </script>

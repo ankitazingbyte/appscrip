@@ -115,11 +115,9 @@
       <div class="dropdown-container">
         <%= link_to "How It Works", admin_howitworks_path %><br>
         <%= link_to "New How It Work", new_admin_howitwork_path %><br>
-        <%= link_to "show How It Work", admin_howitwork_path(:admin,@howitwork) %><br>
+        <%= link_to "show How It Work", admin_howitwork_path(:admin, @howitwork) %><br>
         <%= link_to "edit How It Work", edit_admin_howitwork_path(:admin, @howitwork) %>
       </div>
-      
-      
 
       <button class="dropdown-btn">Products 
         <i class="fa fa-caret-down"></i>
@@ -130,6 +128,7 @@
         <%#= link_to "show product", product_path(@product) %><br>
         <%#= link_to "edit product", edit_product_path(@product) %>
       </div>
+
       <button class="dropdown-btn">Services
         <i class="fa fa-caret-down"></i>
       </button>
@@ -139,38 +138,41 @@
         <%#= link_to "show product", product_path(@product) %>
         <%#= link_to "edit product", edit_product_path(@product) %>
       </div>
+
       <button class="dropdown-btn">FAQ
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-container">
         <button class="dropdown-btn">General
         <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <%= link_to "general", admin_generals_path %><br>
-        <%= link_to "New general", new_admin_general_path %><br>
-        <a href="#">Link 3</a>
-      </div>
-      <button class="dropdown-btn">Licence
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <%= link_to "licence", admin_licences_path %><br>
-        <%= link_to "New licence", new_admin_licence_path %><br>
-        <a href="#">Link 3</a>
-      </div>
-      <button class="dropdown-btn">Payment
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <%= link_to "Payment", admin_payments_path %><br>
-        <%= link_to "New Payment", new_admin_payment_path %><br>
-        <a href="#">Link 3</a>
-      </div>
+        </button>
+        <div class="dropdown-container">
+          <%= link_to "general", admin_generals_path %><br>
+          <%= link_to "New general", new_admin_general_path %><br>
+          <a href="#">Link 3</a>
+        </div>
+
+        <button class="dropdown-btn">Licence
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <%= link_to "licence", admin_licences_path %><br>
+          <%= link_to "New licence", new_admin_licence_path %><br>
+          <a href="#">Link 3</a>
+        </div>
+        <button class="dropdown-btn">Payment
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <%= link_to "Payment", admin_payments_path %><br>
+          <%= link_to "New Payment", new_admin_payment_path %><br>
+          <a href="#">Link 3</a>
+        </div>
         <%= link_to "FAQ", admin_faqs_path %><br>
         <%= link_to "New FAQ", new_admin_faq_path %><br>
         <a href="#">Link 3</a>
       </div>
+
       <button class="dropdown-btn">contact
         <i class="fa fa-caret-down"></i>
       </button>
