@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180614115714) do
+ActiveRecord::Schema.define(version: 20180619085337) do
 
   create_table "aboutus", force: :cascade do |t|
     t.string "title"
     t.string "heading1"
     t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "components", force: :cascade do |t|
+    t.string "heading"
+    t.string "image"
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -91,6 +99,21 @@ ActiveRecord::Schema.define(version: 20180614115714) do
     t.string "heading"
     t.string "body"
     t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "icons", force: :cascade do |t|
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "landings", force: :cascade do |t|
+    t.string "title"
+    t.string "image"
+    t.string "heading"
+    t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -175,6 +198,12 @@ ActiveRecord::Schema.define(version: 20180614115714) do
     t.index ["role_id"], name: "index_users_roles_on_role_id"
     t.index ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
     t.index ["user_id"], name: "index_users_roles_on_user_id"
+  end
+
+  create_table "video_uploads", force: :cascade do |t|
+    t.string "video"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

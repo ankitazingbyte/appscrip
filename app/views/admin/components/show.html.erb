@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Heading:</strong>
+  <%= @component.heading %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @component.image %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @component.title %>
+</p>
+
+<%= link_to 'Edit', edit_component_path(@component) %> |
+<%= link_to 'Back', components_path %>

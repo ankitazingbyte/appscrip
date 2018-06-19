@@ -1,27 +1,29 @@
-<div>
-  <%= image_tag "HomeHeader.jpg", class: "h-image" %>
-  	<div class= "row">
-		<div class= "col-md-6 front-title3">
-		    <h1>Start Your Own Mobile E-Wallet business With Our Wish Clone, Piement!</h1>
-		    <div class="col-md-3">
-		    	<button class= "btnapp">PRICING</button>
-		    </div>
-		    <div class="col-md-3">
-		    	<button class= "btnapp2 pull-right">GET IN TOUCH</button>
-		    </div>
-		</div>
-		<div class= "col-sd-6 pull-right">
-		  	<%= image_tag "header1.png", class: "heading" %>
-		</div>
-	</div>
-</div><br><br><br><br><br>
-<center>
-	<h4> About Us </h4>
-	<h1><%= image_tag "left.png" %>Our Story!<%= image_tag "right.png" %></h1>
-</center>
-<div class="container">
-	<center>Appscrip evolved from years of experience making mobility solutions and being a tech solution provider for startups as 3Embed. We soon realized that there was no specialized provider who can act as a technology partner for startups that are working on on-demand , social , discovery , messaging and shopping platforms and that brought about the whole idea that is APPSCRIP today. We have identified the common denominator to help the end platform owners save time and money and allow them to focus on their core product. They can draw comfort from the fact that the underlying technology (Prebuilt IP) is already driving successful platforms around the world.</center><br>
-</div><br><br><br>
+<% @landings.each do |landing| %>
+    <div>
+        <%= image_tag "HomeHeader.jpg", class: "h-image" %>
+      	<div class= "row">
+    		<div class= "col-md-6 front-title3">
+    		    <h1><%= landing.title %>!</h1>
+    		    <div class="col-md-3">
+    		    	<button class= "btnapp">PRICING</button>
+    		    </div>
+    		    <div class="col-md-3">
+    		    	<button class= "btnapp2 pull-right">GET IN TOUCH</button>
+    		    </div>
+    		</div>
+    		<div class= "col-sd-6 pull-right">
+    		  	<%= image_tag landing.image.url, class: "heading" %>
+    		</div>
+    	</div>
+    </div><br><br><br><br><br>
+    <center>
+    	<h4> About Us </h4>
+    	<h1><%= image_tag "left.png" %><%= landing.heading %>!<%= image_tag "right.png" %></h1>
+    </center>
+    <div class="container">
+    	<center><%= landing.body %>.</center><br>
+    </div><br><br><br>
+<% end %>
 <center>
 	<h4> Demo Screens </h4>
 	<h1><%= image_tag "left.png" %>Our App Screenshots!<%= image_tag "right.png" %></h1>
@@ -117,20 +119,13 @@
 	<h1><%= image_tag "left.png" %>What We Used!<%= image_tag "right.png" %></h1>
 </center><br><br>
 <div class="container">
-	<div class="row">
-		<div class="col-md-3">
-			<%= image_tag "nodejs.png", height: "50px" %>
-		</div>
-		<div class="col-md-3">
-			<%= image_tag "angular.png", height: "50px" %>
-		</div>
-		<div class="col-md-3">
-			<%= image_tag "redis.png", height: "80px" %>
-		</div>
-		<div class="col-md-3">
-			<%= image_tag "native.png", height: "50px" %>
-		</div>
-	</div>
+    <div class="row">
+        <% @icons.each do |icon| %>
+        		<div class="col-md-3">
+        			<%= image_tag icon.image.url, height: "50px" %>
+        		</div>
+        <% end %>
+    </div>
 </div>
 <div class="contact1">
 	<div class= "a-contact"></div>

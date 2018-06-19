@@ -27,7 +27,7 @@ class Admin::ContactsController < Admin::AdminController
     @contact = Contact.new(contact_params)
 
       if @contact.save
-        redirect_to admin_contact_url(@contact), notice: 'Contact was successfully created.' 
+        redirect_to home_index_path, notice: 'Contact was successfully created.' 
       else
          render :new 
       end

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     get 'dashboard/index'
     root 'dashboard#index'
     resources :faqs
-    resources :fontpages
+      resources :fontpages
     resources :customers
     resources :products
     resources :services
@@ -26,5 +26,9 @@ Rails.application.routes.draw do
     resources :payments
     resources :licences
     resources :generals
+    resources :video_uploads
+    resources :icons
+    resources :components
+    resources :landings
   end
 end

@@ -178,7 +178,27 @@
       </button>
       <div class="dropdown-container">
         <%= link_to "Contact", admin_contacts_path %><br>
-        <%= link_to "New product", new_admin_contact_path %><br>
+        <%= link_to "New Contact", new_admin_contact_path %><br>
+        <%#= link_to "show product", product_path(@product) %><br>
+        <%#= link_to "edit product", edit_product_path(@product) %>
+      </div>
+
+      <button class="dropdown-btn">landing page
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <%= link_to "landing", admin_landings_path %><br>
+        <%= link_to "New landing", new_admin_landing_path %><br>
+        <%#= link_to "show product", product_path(@product) %><br>
+        <%#= link_to "edit product", edit_product_path(@product) %>
+      </div>
+
+      <button class="dropdown-btn">Icon
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <%= link_to "landing", admin_icons_path %><br>
+        <%= link_to "New landing", new_admin_icon_path %><br>
         <%#= link_to "show product", product_path(@product) %><br>
         <%#= link_to "edit product", edit_product_path(@product) %>
       </div>

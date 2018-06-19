@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Icons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @icons.each do |icon| %>
+      <tr>
+        <td><%= icon.image %></td>
+        <td><%= link_to 'Show', admin_icon_url(icon) %></td>
+        <td><%= link_to 'Edit', edit_admin_icon_path(icon) %></td>
+        <td><%= link_to 'Destroy', admin_icon_url(icon), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Icon', new_admin_icon_path %>

@@ -26,6 +26,8 @@ class HomeController < ApplicationController
 
 	def landing
 		@contact = Contact.new
+		@landings = Landing.all
+		@icons = Icon.all
 	end
 	
 	def howitwork

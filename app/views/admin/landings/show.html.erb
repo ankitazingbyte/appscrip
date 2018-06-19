@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @landing.title %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @landing.image %>
+</p>
+
+<p>
+  <strong>Heading:</strong>
+  <%= @landing.heading %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @landing.body %>
+</p>
+
+<%= link_to 'Edit', edit_admin_landing_path(@landing) %> |
+<%= link_to 'Back', admin_landings_path %>
