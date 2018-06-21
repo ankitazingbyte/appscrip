@@ -21,7 +21,7 @@
         <td><%= fontpage.title2 %></td>
         <td><%= fontpage.image %></td>
         <td><%= fontpage.heading %></td>
-        <td><%= fontpage.body %></td>
+        <td><%= fontpage.body.html_safe %></td>
         <td><%= link_to 'Show', admin_fontpage_path(fontpage) %></td>
         <td><%= link_to 'Edit', edit_admin_fontpage_path(fontpage) %></td>
         <td><%= link_to 'Destroy', admin_fontpage_url(fontpage), method: :delete, data: { confirm: 'Are you sure?' } %></td>

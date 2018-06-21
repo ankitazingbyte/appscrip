@@ -18,14 +18,14 @@
 		    <button type="button" class="btn-1">Learn More</button>
 		</div>
 	</div><br><br><br><br><br><br>
-	<div class="container">
+	<div class="container-fuild">
 	    <div class="row">
 	        <div class="col-md-4">
 	        	<%= image_tag fontpage.image.url, width: "400px", height: "550px"%>
 	        </div>
 	        <div class="col-md-8">
 	        	<h2><%= fontpage.heading %>!<%= image_tag "right.png" %></h2><br>
-	        	<p><%= fontpage.body %></p><br>
+	        	<p><%= fontpage.body.html_safe %></p><br>
 	        	<button type="button" class="btn3"><span style="font-size:30px;cursor:pointer" onclick="openNav()">Get Started Now</span></button>
 	        </div>
 	    </div>
@@ -36,124 +36,122 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <div class="tab" role="tabpanel">
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">On Demand</a></li>
-                    <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Social And Messaging</a></li>
-                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">Booking And E-commerce</a></li>
-                </ul><br>
-                <!-- Tab panes -->
-                <div class="tab-content tabs">
-                    <div role="tabpanel" class="tab-pane fade in active" id="Section1">
-                    	<div class="container">
-						    <div class="row">
-						        <div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel">
-						            <!-- Wrapper for slides -->
-						            <div class="carousel-inner">
-						                <% @demands.each_with_index do |demand, index| %>
-							                <div class="item <%= index == 1 ? 'active'  : '' %>"> 
-							                    <div class="row">
-							                        <div class="col-sm-3 col-sm-offset-2">
-							                            <div class="col-item">
-							                                <div class="photo">
-							                                    <%= image_tag demand.image.url, height:"350px;" %>
-							                                </div>
-							                            </div>
-							                        </div>
-							                        <div class="col-sm-6 col-sm-offset-6 sm">
-							                        	<div class="col-item">
-													    <b><h2><%= demand.title %></h2></b><br>
-													    <%= demand.description %><br>
-													    <button type="button" class="btn2">View App Details</button>
-													</div>
-													</div>
-							                    </div>
-							                </div>
-						               	<% end %>
-						            </div>
-						        </div>
-						    </div>
-					        <div class="row controlbtn">    
-				                <div class="controls pull-right hidden-xs">
-				                    <a class="btn btn-danger btn-lg" href="#carousel-example-generic" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-				                </div>
-				            </div>
-						</div>
-					</div>
-                    <div role="tabpanel" class="tab-pane fade" id="Section2">
-                        <div class="container">
-						    <div class="row">
-						        <div id="carousel" class="carousel slide hidden-xs" data-ride="carousel">
-						            <!-- Wrapper for slides -->
-						            <div class="carousel-inner">
-						                <% @socials.each_with_index do |social, index| %>
-							                <div class="item <%= index == 1 ? 'active'  : '' %>"> 
-							                    <div class="row">
-							                        <div class="col-sm-3 col-sm-offset-2">
-							                            <div class="col-item">
-							                                <div class="photo">
-							                                    <%= image_tag social.image.url, height:"350px;" %>
-							                                </div>
-							                            </div>
-							                        </div>
-							                        <div class="col-sm-6 col-sm-offset-6 sm">
-							                        	<div class="col-item">
-														    <b><h2><%= social.title %></h2></b><br>
-														    <%= social.description %><br>
-														    <button type="button" class="btn2">View App Details</button>
-														</div>
-													</div>
-							                    </div>
-							                </div>
-						               	<% end %>
-						            </div>
-						        </div>
-						    </div>
-					        <div class="row controlbtn">    
-				                <div class="controls pull-right hidden-xs">
-				                    <a class="btn btn-danger btn-lg" href="#carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-				                </div>
+        <div class="tab" role="tabpanel">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">On Demand</a></li>
+                <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Social And Messaging</a></li>
+                <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">Booking And E-commerce</a></li>
+            </ul><br>
+            <!-- Tab panes -->
+            <div class="tab-content tabs">
+                <div role="tabpanel" class="tab-pane fade in active" id="Section1">
+                	<div class="container">
+					    <div class="row">
+					        <div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel">
+					            <!-- Wrapper for slides -->
+					            <div class="carousel-inner" style="margin: -235px -195px;">
+					                <% @demands.each_with_index do |demand, index| %>
+						                <div class="item <%= index == 1 ? 'active'  : '' %>"> 
+						                    <div class="row">
+						                        <div class="col-sm-2 col-sm-offset-2">
+						                            <div class="col-item">
+						                                <div class="photo">
+						                                    <%= image_tag demand.image.url, height:"800px;" %>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="col-sm-6 col-sm-offset-6 sm">
+						                        	<div class="col-item2">
+												    <b><h2><%= demand.title %></h2></b><br>
+												    <%= demand.description.html_safe %><br>
+												    <button type="button" class="btn2">VIEW APP DEATAILS</button>
+												</div>
+												</div>
+						                    </div>
+						                </div>
+					               	<% end %>
+					            </div>
 					        </div>
-						</div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="Section3">
-                        <div class="container">
-						    <div class="row">
-						        <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
-						            <!-- Wrapper for slides -->
-						            <div class="carousel-inner">
-						                <% @ecommerces.each_with_index do |ecommerce, index| %>
-							                <div class="item <%= index == 1 ? 'active'  : '' %>"> 
-							                    <div class="row">
-							                        <div class="col-sm-3 col-sm-offset-2">
-							                            <div class="col-item">
-							                                <div class="photo">
-							                                    <%= image_tag ecommerce.image.url, height:"350px;" %>
-							                                </div>
-							                            </div>
-							                        </div>
-							                        <div class="col-sm-6 col-sm-offset-6 sm">
-							                        	<div class="col-item">
-													    <b><h2><%= ecommerce.title %></h2></b><br>
-													    <%= ecommerce.description %><br>
+					    </div>
+				        <div class="row controlbtn">    
+			                <div class="controls pull-right hidden-xs">
+			                    <a class="btn btn-lg" href="#carousel-example-generic" data-slide="next">NEXT<span class="glyphicon glyphicon-arrow-right"></span></a>
+			                </div>
+			            </div>
+					</div>
+				</div>
+                <div role="tabpanel" class="tab-pane fade" id="Section2">
+                    <div class="container">
+					    <div class="row">
+					        <div id="carousel" class="carousel slide hidden-xs" data-ride="carousel">
+					            <!-- Wrapper for slides -->
+					            <div class="carousel-inner">
+					                <% @socials.each_with_index do |social, index| %>
+						                <div class="item <%= index == 1 ? 'active'  : '' %>"> 
+						                    <div class="row">
+						                        <div class="col-sm-3 ">
+						                            <div class="col-item2">
+						                                <div class="photo">
+						                                    <%= image_tag social.image.url, height:"350px;" %>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="col-sm-6 sm">
+						                        	<div class="col-item">
+													    <b><h2><%= social.title %></h2></b><br>
+													    <%= social.description %><br>
 													    <button type="button" class="btn2">View App Details</button>
 													</div>
-													</div>
-							                    </div>
-							                </div>
-						               	<% end %>
-						            </div>
-						        </div>
-						    </div>
-					        <div class="row controlbtn">    
-				                <div class="controls pull-right hidden-xs">
-				                    <a class="btn btn-danger btn-lg" href="#carousel-example" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-				                </div>
-				            </div>
-						</div>
-                    </div>
+												</div>
+						                    </div>
+						                </div>
+					               	<% end %>
+					            </div>
+					        </div>
+					    </div>
+				        <div class="row controlbtn">    
+			                <div class="controls pull-right hidden-xs">
+			                    <a class="btn btn-danger btn-lg" href="#carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			                </div>
+				        </div>
+					</div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="Section3">
+                    <div class="container">
+					    <div class="row">
+					        <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
+					            <!-- Wrapper for slides -->
+					            <div class="carousel-inner">
+					                <% @ecommerces.each_with_index do |ecommerce, index| %>
+						                <div class="item <%= index == 1 ? 'active'  : '' %>"> 
+						                    <div class="row">
+						                        <div class="col-sm-3">
+						                            <div class="col-item2">
+						                                <div class="photo">
+						                                    <%= image_tag ecommerce.image.url, height:"350px;" %>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="col-sm-6 col-sm-offset-6 sm">
+						                        	<div class="col-item">
+												    <b><h2><%= ecommerce.title %></h2></b><br>
+												    <%= ecommerce.description %><br>
+												    <button type="button" class="btn2">View App Details</button>
+												</div>
+												</div>
+						                    </div>
+						                </div>
+					               	<% end %>
+					            </div>
+					        </div>
+					    </div>
+				        <div class="row controlbtn">    
+			                <div class="controls pull-right hidden-xs">
+			                    <a class="btn btn-danger btn-lg" href="#carousel-example" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			                </div>
+			            </div>
+					</div>
                 </div>
             </div>
         </div>
@@ -175,11 +173,10 @@
 			  	<% @customers.each_with_index do |customer, index| %>
 					<div class="item <%= index == 1 ? 'active'  : '' %>"> 
 						<center>
-							<h4>"<%= customer.message %>"<br> </h4>
-							<%= image_tag customer.image.url, class: "img-circle"%><br>
-							<%= customer.name %><br>
-							<%= customer.designation %><br>
-								
+							<div class="text"><%= customer.message.html_safe %><br></div>
+							<div class="circle"><%= image_tag customer.image.url, class: "img-circle"%></div><br>
+							<div class="cusname"><%= customer.name %></div><br>
+							<div class="cusdes"><%= customer.designation %></div><br>
 						</center>
 					</div>
 		       	<% end %>

@@ -12,8 +12,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-footer{
-  margin: 260px 0px;
+.footer{
+  margin: 460px 0px;
   font-size: 20px;
   color: slategrey;
 }
@@ -57,8 +57,7 @@ a:hover,a:focus{
 .tab .nav-tabs{
   border-bottom: 0 none;
   background: transparent;
-  border-top-right-radius: 25px;
-  border-top-left-radius: 25px;
+  margin: 70px 100px;
 }
 
 .tab .nav-tabs li a{
@@ -90,7 +89,7 @@ a:hover,a:focus{
   font-size: 14px;
   color: #5a5c5d;
   line-height: 24px;
-  margin-top: -19px;
+  margin: 0px -30px;
   background: #fff;
 }
 
@@ -116,7 +115,7 @@ a:hover,a:focus{
 .front-title{
   color: white;
   position: absolute;
-  margin: -323px 260px;
+  margin: -350px 240px;
 }
 
 .front-title2{
@@ -144,12 +143,11 @@ a:hover,a:focus{
 }
 
 .btn {
-  display: inline-block;
-  margin-bottom: -160px;    
-  padding: 8px 34px;
-  font-size: 14px;
-  border-radius: 30px;
-  height: 57px;
+  color: #e93d4b;
+  margin-bottom: 221px;    
+  padding: 44px 15px;
+  font-size: 30px;
+  border: none;
 }
 
 .btn-1{
@@ -165,9 +163,10 @@ a:hover,a:focus{
   background-color: transparent;
   border: 2px solid #e93d4b;
   width: 219px;
-  height: 40px;
+  height: 65px;
   color: #e93d4b;
-  border-radius: 12px;
+  border-radius: 30px;
+  margin: 20px 0px;
 } 
 
 .btn3{
@@ -178,7 +177,7 @@ a:hover,a:focus{
   color: white;
   border-radius: 12px;
   font-size: 25px;
-  margin: 100px;
+  margin: 15px;
 }
 
 .btn-4{
@@ -193,9 +192,9 @@ a:hover,a:focus{
 .a-contact{
   background: #ea3e4c;
   height: 405px;
-  margin: 0px;
-  border-bottom-left-radius:45%;
-  border-bottom-right-radius:45%;
+  margin: 108px 0px;
+  border-bottom-left-radius:55%;
+  border-bottom-right-radius:55%;
 }
 
 .b-contact{
@@ -204,7 +203,7 @@ a:hover,a:focus{
   height: 500px;
   position: relative;
   top: -60px;
-  margin: -240px;
+  margin: -360px;
 }
 
 .c-contact{
@@ -330,6 +329,7 @@ a:hover,a:focus{
 .img-circle{
   height: 130px;
   width: 130px;
+  background-color: #ea3e4c;
 }
 
 .fact{
@@ -448,6 +448,7 @@ a:hover,a:focus{
 .car1{
   height: 550px;
   width: 100%;
+  margin: -120px 0px;
 }
 
 /* carousle*/
@@ -484,6 +485,26 @@ carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbna
 
 .carousel-indicators .active {
   background-color: #ea3e4c;
+  display: inline-block;
+  width: 40px;
+  height: 8px;
+  margin: 0px;
+  text-indent: -999px;
+  border-radius: 0;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 40px;
+  height: 8px;
+  margin: 0px;
+  text-indent: -999px;
+  border-radius: 0;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 6px;
 }
 
 /* POPUP Window */
@@ -533,4 +554,42 @@ carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbna
 
 .copy{
   margin: 0px;
+}
+
+.col-item2{
+ margin: -359px 40px;
+}
+
+.text{
+  padding: 35px;
+  font-size: 25px;
+}
+
+.circle{
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  background-color: #ea3e4c;
+  margin: -15px;
+  padding: 4px 5px;
+}
+
+.cusname{
+  font-size: 25px;
+}
+
+.cusdes{
+  font-size: 18px;
+  color: #ea3e4c;
+  margin: -25px;
+}
+
+.cusbtn{
+  background-color: #ea3e4c; 
+  border-radius: 37px; 
+  width: 350px;
+  height: 60px; 
+  font-size: 30px;
+  color: #fff;
+  margin: 40px;
 }
