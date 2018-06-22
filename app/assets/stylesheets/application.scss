@@ -12,6 +12,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@media print {
+  .container {
+    width: auto;
+  }
+}
+
 body{
 font-family: open sans;
 }
