@@ -1,21 +1,21 @@
-<!-- <div id="myNav" class="overlay">
+<div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
     <h1>LETS CREATE SOMETHING TOGETHER</h1><br><br>
     <h3>SEND US A MESSAGE</h3>
-   <center><%#= render "admin/contacts/form" %></center>
+   <center><%= render "admin/contacts/form" %></center>
   </div>
-</div> -->
+</div>
 <% @fontpages.each do |fontpage| %>
 	<div>
 	  	<%= image_tag "HomeHeader.jpg", class: "h-image" %>
 
 		<div class= "front-title">
 		    <center>
-		    	<h1><%= fontpage.title1 %></h1>
+		    	<div class="font"><%= fontpage.title1 %></div>
 		    	<h2><%= fontpage.title2 %></h2>
 			</center>
-		    <button type="button" class="btn-1">Learn More</button>
+		    <button type="button" class="btn-1">LEARN MORE</button>
 		</div>
 	</div><br><br><br><br><br><br>
 	<div class="container-fuild">
@@ -26,7 +26,7 @@
 	        <div class="col-md-8">
 	        	<h2><%= fontpage.heading %>!<%= image_tag "right.png" %></h2><br>
 	        	<p><%= fontpage.body.html_safe %></p><br>
-	        	<button type="button" class="btn3"><span style="font-size:30px;cursor:pointer" onclick="openNav()">Get Started Now</span></button>
+	        	<button type="button" class="btn3"><span style="font-size:30px;cursor:pointer" onclick="openNav()">GET STARTED NOW</span></button>
 	        </div>
 	    </div>
 	</div>

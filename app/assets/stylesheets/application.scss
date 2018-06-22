@@ -12,6 +12,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body{
+font-family: open sans;
+}
 .footer{
   margin: 460px 0px;
   font-size: 20px;
@@ -157,6 +160,12 @@ a:hover,a:focus{
   border: 2px solid #fff;
   border-radius: 30px;
   background: transparent;
+  font-size: 20px;
+}
+.btn-1:hover {
+  background-color: white;
+  color: #e93d4c ;
+  border: 1px solid #e93d4c;
 }
 
 .btn2{
@@ -164,20 +173,31 @@ a:hover,a:focus{
   border: 2px solid #e93d4b;
   width: 219px;
   height: 65px;
+  font-size: 15px;
   color: #e93d4b;
   border-radius: 30px;
   margin: 20px 0px;
 } 
+.btn2:hover {
+  background-color: #e93d4c;
+  color: white;
+  border: 1px solid #e93d4c;
+}
 
 .btn3{
   background-color: #e93d4c;
   border: none;
-  width: 280px;
+  width: 360px;
   height: 50px;
   color: white;
-  border-radius: 12px;
+  border-radius: 30px;
   font-size: 25px;
   margin: 15px;
+}
+.btn3:hover {
+  background-color: white;
+  color: #e93d4c;
+  border: 1px solid #e93d4c;
 }
 
 .btn-4{
@@ -192,9 +212,10 @@ a:hover,a:focus{
 .a-contact{
   background: #ea3e4c;
   height: 405px;
-  margin: 108px 0px;
+  margin: 108px -95px;
   border-bottom-left-radius:55%;
   border-bottom-right-radius:55%;
+  width: 1485px;
 }
 
 .b-contact{
@@ -558,6 +579,7 @@ carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbna
 
 .col-item2{
  margin: -359px 40px;
+ color: black;
 }
 
 .text{
@@ -592,4 +614,12 @@ carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbna
   font-size: 30px;
   color: #fff;
   margin: 40px;
+}
+
+.hr{
+  margin: 0px;
+}
+
+.font{
+  font-size:42px;
 }
