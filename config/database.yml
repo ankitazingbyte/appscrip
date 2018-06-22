@@ -21,7 +21,7 @@
 #   <<: *default
 #   database: db/production.sqlite3
 
-#   # postgresql
+  # postgresql
 
 default: &default
   adapter: postgresql
