@@ -171,7 +171,7 @@
 		    <div class='carousel-inner a1' role='listbox'>
 				<h1><center><%= image_tag "left.png" %>What Our Customers Have To Say<%= image_tag "right.png" %></center></h1>
 			  	<% @customers.each_with_index do |customer, index| %>
-					<div class="item <%= index == 1 ? 'active'  : '' %>"> 
+					<div class="item <%= index == 0 ? 'active'  : '' %>"> 
 						<center>
 							<div class="text"><%= customer.message.html_safe %><br></div>
 							<div class="circle"><%= image_tag customer.image.url, class: "img-circle"%></div><br>
