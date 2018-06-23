@@ -52,7 +52,7 @@
 					            <!-- Wrapper for slides -->
 					            <div class="carousel-inner" style="margin: -235px -195px;">
 					                <% @demands.each_with_index do |demand, index| %>
-						                <div class="item <%= index == 1 ? 'active'  : '' %>"> 
+						                <div class="item <%= index == 0 ? 'active'  : '' %>"> 
 						                    <div class="row">
 						                        <div class="col-sm-2 col-sm-offset-2">
 						                            <div class="col-item">
@@ -88,7 +88,7 @@
 					            <!-- Wrapper for slides -->
 					            <div class="carousel-inner">
 					                <% @socials.each_with_index do |social, index| %>
-						                <div class="item <%= index == 1 ? 'active'  : '' %>"> 
+						                <div class="item <%= index == 0 ? 'active'  : '' %>"> 
 						                    <div class="row">
 						                        <div class="col-sm-3 ">
 						                            <div class="col-item2">
@@ -124,7 +124,7 @@
 					            <!-- Wrapper for slides -->
 					            <div class="carousel-inner">
 					                <% @ecommerces.each_with_index do |ecommerce, index| %>
-						                <div class="item <%= index == 1 ? 'active'  : '' %>"> 
+						                <div class="item <%= index == 0 ? 'active'  : '' %>"> 
 						                    <div class="row">
 						                        <div class="col-sm-3">
 						                            <div class="col-item2">
