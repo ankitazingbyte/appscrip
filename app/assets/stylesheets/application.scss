@@ -141,11 +141,7 @@ a:hover,a:focus{
   margin: -350px 240px;
 }
 
-.front-title2{
-  color: white;
-  position: absolute;
-  margin: -160px 480px;
-}
+
 
 .front-title3{
   color: white;
@@ -235,7 +231,7 @@ a:hover,a:focus{
   margin: 108px -95px;
   border-bottom-left-radius:55%;
   border-bottom-right-radius:55%;
-  width: 1485px;
+  width: auto;
 }
 
 .b-contact{
@@ -655,4 +651,17 @@ carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbna
 #horizontal-list li {
   display: inline;
   margin: 15px;
+}
+
+/*ABOUT PAGE*/
+.h-image1{
+  width: 100%;
+  height: 600px;
+  margin: -90px 0px;
+}
+
+.front-title2{
+  color: white;
+  position: absolute;
+  margin: -170px 570px;
 }
