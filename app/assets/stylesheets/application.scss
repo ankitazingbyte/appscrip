@@ -9,6 +9,8 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  */
+
+@import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -19,13 +21,24 @@
 }
 
 body{
-font-family: open sans;
+  font-family: open sans;
+  padding-bottom: 70px;
+  height: 100%;
 }
-.footer{
-  margin: 460px 0px;
-  font-size: 20px;
+
+.footer {
+  font-size: 14px;
   color: slategrey;
+  padding-top: 24px;
+  display: block;
+  margin-top: 386px;
+  box-sizing: border-box;
+  position: relative;
+  width: auto;
+  font-family: open sans;
+  margin-bottom: 80px;
 }
+
 .navbar{
   background-color: transparent !important;
   position: relative;
@@ -33,6 +46,7 @@ font-family: open sans;
   bottom: -30px;
   font-size: 20px;
 }
+
 .navbar-nav > li > a:hover{
   background-color: transparent !important;
 }
@@ -209,10 +223,10 @@ a:hover,a:focus{
 .btn-4{
   background-color: #d2d2d2;;
   border: 2px solid #d2d2d2;;
-  width: 219px;
+  width: 230px;
   height: 40px;
   color: #67656bcc;
-  border-radius: 12px;
+  border-radius: 25px;
 } 
 
 .a-contact{
@@ -270,9 +284,14 @@ a:hover,a:focus{
   color: #ffffff;
 }
 
-.table{
-  padding: 5px 28px;
-  line-height: 4.428571;
+table{
+  width: 105%;
+}
+table, th, td{
+  padding: 25px;
+  line-height: 0.428571;
+  vertical-align: top;
+  border-top: 0px solid #ddd;
 }
 
 .raise:hover,
@@ -580,7 +599,10 @@ carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbna
 }
 
 .copy{
-  margin: 0px;
+  margin: 50px;
+  color: slategrey;
+  display: inline-block;
+  font-family: initial;
 }
 
 .col-item2{
@@ -628,4 +650,9 @@ carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbna
 
 .font{
   font-size:42px;
+}
+
+#horizontal-list li {
+  display: inline;
+  margin: 15px;
 }
