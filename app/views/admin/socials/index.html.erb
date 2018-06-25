@@ -17,7 +17,7 @@
       <% @socials.each do |social| %>
         <tr>
           <td><%= social.title %></td>
-          <td><%= social.description %></td>
+          <td><%= social.description.html_safe %></td>
           <td><%= social.image %></td>
           <td><%= link_to 'Show', admin_social_url(social) %></td>
           <td><%= link_to 'Edit', edit_admin_social_path(social) %></td>
