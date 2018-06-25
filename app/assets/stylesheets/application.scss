@@ -141,8 +141,6 @@ a:hover,a:focus{
   margin: -350px 240px;
 }
 
-
-
 .front-title3{
   color: white;
   position: absolute;
@@ -178,6 +176,7 @@ a:hover,a:focus{
   background: transparent;
   font-size: 20px;
 }
+
 .btn-1:hover {
   background-color: white;
   color: #e93d4c ;
@@ -194,6 +193,7 @@ a:hover,a:focus{
   border-radius: 30px;
   margin: 20px 0px;
 } 
+
 .btn2:hover {
   background-color: #e93d4c;
   color: white;
@@ -210,6 +210,7 @@ a:hover,a:focus{
   font-size: 25px;
   margin: 15px;
 }
+
 .btn3:hover {
   background-color: white;
   color: #e93d4c;
@@ -283,6 +284,7 @@ a:hover,a:focus{
 table{
   width: 105%;
 }
+
 table, th, td{
   padding: 25px;
   line-height: 0.428571;
@@ -381,12 +383,10 @@ table, th, td{
 }
 
 .cust{
-  position: absolute;
-  margin: -221px 340px;
+  position: relative;
+  margin: -160px 0px;
   color: white;
-  h6{
-  display: inline;
-  }
+  font-size: 20px;
 }
 
 .dot {
@@ -461,9 +461,11 @@ table, th, td{
   border:0;
   border-color: #fff;
 }
+
 .panel-default {
     border-color: #fff;
 }
+
 .panel-title>a, .panel-title>a:active{
   display:block;
   padding:15px;
@@ -475,12 +477,14 @@ table, th, td{
   word-spacing:3px;
   text-decoration:none;
 }
+
 .panel-heading  a:before {
   font-family: 'Glyphicons Halflings';
   content: "\e114";
   float: right;
   transition: all 0.5s;
 }
+
 .panel-heading.active a:before {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -503,6 +507,7 @@ table, th, td{
   background-image:'testinomialbg.jpg' no-repeat;
   height: 550px;
 }
+
 carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
   width: 80%;
   /* left: 50%; */

@@ -19,7 +19,7 @@
 <center><p> Members </p>
 	<h1><%= image_tag "left.png" %>Our Awesome Team!<%= image_tag "right.png" %></h1>
 </center>
-<div class="container">
+<center><div class="container">
   	<% @teams.each do |team| %>
 	  <div class="div2 raise col-md-3">
 	  	<center><%= image_tag team.image.url, class: "img-circle"%>
@@ -28,20 +28,20 @@
 	  </div>
   	<% end %>
 </div>
-<div class="div3"><%= image_tag "testinomialbg.jpg", height:"360", width: "1300px;" %></div>
+<div class="div3"><%= image_tag "testinomialbg.jpg", height:"470", width: "1500px;" %></div>
 <div class="fact"><h1><%= image_tag "left.png" %>Some Interesting Fact about us<%= image_tag "right.png" %></h1></div>
-<div class="cust">
-	<h6>650+
-	customers</h6>
-	<h6> 6500+
-	Working Hours</h6>
-	<h6>780+
-	cups of coffee</h6>
-	<h6>6000+
-	Lines Of Codes</h6>
-</div>
+	<div class="row cust">
+		<div class="col-lg-3">650+<br>
+		customers</div>
+		<div class="col-lg-3">6500+<br>
+		Working Hours</div>
+		<div class="col-lg-3">780+<br>
+		cups of coffee</div>
+		<div class="col-lg-3">6000+<br>
+		Lines Of Codes</div>
+	</div>
 
-<center>
+
 	<div class= "a-contact"></div>
 	<div class= "b-contact"><br>
 		<h1><%= image_tag "left.png" %> Lets Contact With Us <%= image_tag "right.png" %></h1>
