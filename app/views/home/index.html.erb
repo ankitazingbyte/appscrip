@@ -82,62 +82,26 @@
 					</div>
 				</div>
                 <div role="tabpanel" class="tab-pane fade" id="Section2">
-                    <div class="container">
+                	<div class="container">
 					    <div class="row">
-					        <div id="carousel" class="carousel slide hidden-xs" data-ride="carousel">
+					        <div id="carousel-example-generic1" class="carousel slide hidden-xs" data-ride="carousel">
 					            <!-- Wrapper for slides -->
-					            <div class="carousel-inner">
+					            <div class="carousel-inner" style="margin: -30px -195px;">
 					                <% @socials.each_with_index do |social, index| %>
 						                <div class="item <%= index == 0 ? 'active'  : '' %>"> 
 						                    <div class="row">
-						                        <div class="col-sm-3 ">
-						                            <div class="col-item2">
+						                        <div class="col-sm-2 col-sm-offset-2">
+						                            <div class="col-item">
 						                                <div class="photo">
-						                                    <%= image_tag social.image.url, height:"350px;" %>
-						                                </div>
-						                            </div>
-						                        </div>
-						                        <div class="col-sm-6 sm">
-						                        	<div class="col-item">
-													    <b><h2><%= social.title %></h2></b><br>
-													    <%= social.description %><br>
-													    <button type="button" class="btn2">View App Details</button>
-													</div>
-												</div>
-						                    </div>
-						                </div>
-					               	<% end %>
-					            </div>
-					        </div>
-					    </div>
-				        <div class="row controlbtn">    
-			                <div class="controls pull-right hidden-xs">
-			                    <a class="btn btn-danger btn-lg" href="#carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-			                </div>
-				        </div>
-					</div>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="Section3">
-                    <div class="container">
-					    <div class="row">
-					        <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
-					            <!-- Wrapper for slides -->
-					            <div class="carousel-inner">
-					                <% @ecommerces.each_with_index do |ecommerce, index| %>
-						                <div class="item <%= index == 0 ? 'active'  : '' %>"> 
-						                    <div class="row">
-						                        <div class="col-sm-3">
-						                            <div class="col-item2">
-						                                <div class="photo">
-						                                    <%= image_tag ecommerce.image.url, height:"350px;" %>
+						                                    <%= image_tag social.image.url, height:"800px;" %>
 						                                </div>
 						                            </div>
 						                        </div>
 						                        <div class="col-sm-6 col-sm-offset-6 sm">
-						                        	<div class="col-item">
-												    <b><h2><%= ecommerce.title %></h2></b><br>
-												    <%= ecommerce.description %><br>
-												    <button type="button" class="btn2">View App Details</button>
+						                        	<div class="col-item2">
+												    <b><h2><%= social.title %></h2></b><br>
+												    <%= social.description.html_safe %><br>
+												    <button type="button" class="btn2">VIEW APP DEATAILS</button>
 												</div>
 												</div>
 						                    </div>
@@ -148,7 +112,43 @@
 					    </div>
 				        <div class="row controlbtn">    
 			                <div class="controls pull-right hidden-xs">
-			                    <a class="btn btn-danger btn-lg" href="#carousel-example" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			                    <a class="btn btn-lg" href="#carousel-example-generic1" data-slide="next">NEXT<span class="glyphicon glyphicon-arrow-right"></span></a>
+			                </div>
+			            </div>
+					</div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="Section3">
+                	<div class="container">
+					    <div class="row">
+					        <div id="carousel-example-generic2" class="carousel slide hidden-xs" data-ride="carousel">
+					            <!-- Wrapper for slides -->
+					            <div class="carousel-inner" style="margin: -30px -195px;">
+					                <% @ecommerces.each_with_index do |ecommerce, index| %>
+						                <div class="item <%= index == 0 ? 'active'  : '' %>"> 
+						                    <div class="row">
+						                        <div class="col-sm-2 col-sm-offset-2">
+						                            <div class="col-item">
+						                                <div class="photo">
+						                                    <%= image_tag ecommerce.image.url, height:"800px;" %>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="col-sm-6 col-sm-offset-6 sm">
+						                        	<div class="col-item2">
+												    <b><h2><%= ecommerce.title %></h2></b><br>
+												    <%= ecommerce.description.html_safe %><br>
+												    <button type="button" class="btn2">VIEW APP DEATAILS</button>
+												</div>
+												</div>
+						                    </div>
+						                </div>
+					               	<% end %>
+					            </div>
+					        </div>
+					    </div>
+				        <div class="row controlbtn">    
+			                <div class="controls pull-right hidden-xs">
+			                    <a class="btn btn-lg" href="#carousel-example-generic2" data-slide="next">NEXT<span class="glyphicon glyphicon-arrow-right"></span></a>
 			                </div>
 			            </div>
 					</div>
