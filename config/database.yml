@@ -24,13 +24,13 @@ production:
   # postgresql
 
 # default: &default
-  # adapter: postgresql
-  # encoding: unicode
-  # username: postgres
-  # password: 12345678
-  # pool: 5
-  # host: localhost
+#   adapter: postgresql
+#   encoding: unicode
+#   username: postgres
+#   password: 12345678
+#   pool: 5
+#   host: localhost
 
 # development: 
-  # <<: *default
-  # database: db/development
+#   <<: *default
+#   database: db/development
