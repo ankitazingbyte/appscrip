@@ -28,6 +28,7 @@ class HomeController < ApplicationController
 		@contact = Contact.new
 		@landings = Landing.all
 		@icons = Icon.all
+		@features = Feature.all
 	end
 	
 	def howitwork
@@ -36,6 +37,9 @@ class HomeController < ApplicationController
 	end
 	def contact
 		@contact = Contact.new
+		@contactpages = Contactpage.all
+	end
+	def mappage
 	end
 
 end

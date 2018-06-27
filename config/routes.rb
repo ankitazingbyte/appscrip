@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   get 'home/landing'
   get 'home/howitwork'
   get 'home/contact'
+  get 'home/mappage'
   namespace :admin do
     get 'dashboard/index'
     root 'dashboard#index'
+    resources :features
     resources :faqs
     resources :fontpages
     resources :customers

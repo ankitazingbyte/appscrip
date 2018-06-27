@@ -3,7 +3,7 @@
         <%= image_tag "HomeHeader.jpg", class: "h-image" %>
       	<div class= "row">
     		<div class= "col-md-6 front-title3">
-    		    <h1><%= landing.title %>!</h1>
+    		    <div style="font-size: 38px; font-family: initial;"><%= landing.title %>!</div>
     		    <div class="col-md-3">
     		    	<button class= "btnapp">PRICING</button>
     		    </div>
@@ -16,13 +16,15 @@
     		</div>
     	</div>
     </div><br><br><br><br><br>
-    <center>
-    	<h4> About Us </h4>
-    	<h1><%= image_tag "left.png" %><%= landing.heading %>!<%= image_tag "right.png" %></h1>
-    </center>
-    <div class="container">
-    	<center><%= landing.body %>.</center><br>
-    </div><br><br><br>
+    <div class="pera">
+        <center>
+        	<h4>Mobile multivendor Wallet Clone</h4>
+        	<h1><%= image_tag "left.png" %><%= landing.heading %>!<%= image_tag "right.png" %></h1>
+        </center>
+        <div class="container">
+        	<center><%= landing.body %>.</center><br>
+        </div><br><br><br>
+    </div>
 <% end %>
 <center>
 	<h4> Demo Screens </h4>
@@ -38,28 +40,28 @@
                         <div class="col-sm-3">
                             <div class="col-item">
                                 <div class="photo">
-                                    <%= image_tag "screenshot1.png", height: "270px" %>
+                                    <%= image_tag "screenshot1.png", height: "600px" %>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="col-item">
                                 <div class="photo">
-                                    <%= image_tag "screenshot2.png", height: "270px" %>
+                                    <%= image_tag "screenshot2.png", height: "600px" %>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="col-item">
                                 <div class="photo">
-                                    <%= image_tag "screenshot3.png", height: "270px" %>
+                                    <%= image_tag "screenshot3.png", height: "600px" %>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="col-item">
                                 <div class="photo">
-                                    <%= image_tag "screenshot4.png", height: "270px" %>
+                                    <%= image_tag "screenshot4.png", height: "600px" %>
                                 </div>
                             </div>
                         </div>
@@ -70,28 +72,28 @@
                         <div class="col-sm-3">
                             <div class="col-item">
                                 <div class="photo">
-                                    <%= image_tag "screenshot4.png", height: "270px" %>
+                                    <%= image_tag "screenshot4.png", height: "600px" %>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="col-item">
                                 <div class="photo">
-                                    <%= image_tag "screenshot4.png", height: "270px" %>
+                                    <%= image_tag "screenshot4.png", height: "600px" %>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="col-item">
                                 <div class="photo">
-                                    <%= image_tag "screenshot4.png", height: "270px" %>
+                                    <%= image_tag "screenshot4.png", height: "600px" %>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="col-item">
                                 <div class="photo">
-                                    <%= image_tag "screenshot4.png", height: "270px" %>
+                                    <%= image_tag "screenshot4.png", height: "600px" %>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +102,7 @@
             </div>
         </div>
         <center>
-            <div class="row" style="margin: 80px 280px;">    
+            <div class="row" style="margin: 20px 0px;">    
                 <!-- Controls -->
                 <div class="controls hidden-xs">
                     <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-example-generic" data-slide="prev"></a>
@@ -110,14 +112,28 @@
         </center>
     </div>
 </div>
-<center>
-	<h4> UI Components </h4>
-	<h1><%= image_tag "left.png" %>Endless Features!<%= image_tag "right.png" %></h1>
-</center>
-<center>
-	<h4> Technologies </h4>
-	<h1><%= image_tag "left.png" %>What We Used!<%= image_tag "right.png" %></h1>
-</center><br><br>
+<div class="pera2">
+    <center>
+    	<h4> UI Components </h4>
+    	<h1><%= image_tag "left.png" %>Endless Features!<%= image_tag "right.png" %></h1>
+        <div class="row">
+            <% @features.each do |feature| %>
+                <div class="pera4">
+                    <div class="col-sm-3">
+                        <%= image_tag feature.image.url, height: "110px" %><br><br>
+                        <%= feature.titile %>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </center>
+</div>
+<div class="pera3">
+    <center>
+    	<h4> Technologies </h4>
+    	<h1><%= image_tag "left.png" %>What We Used!<%= image_tag "right.png" %></h1>
+    </center><br><br>
+</div>
 <div class="container">
     <div class="row">
         <% @icons.each do |icon| %>

@@ -22,9 +22,9 @@
         <td><%= contactpage.phone %></td>
         <td><%= contactpage.address %></td>
         <td><%= contactpage.mail %></td>
-        <td><%= link_to 'Show', contactpage %></td>
-        <td><%= link_to 'Edit', edit_contactpage_path(contactpage) %></td>
-        <td><%= link_to 'Destroy', contactpage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', admin_contactpage_url(:admin, @contactpage) %></td>
+        <td><%= link_to 'Edit', edit_admin_contactpage_path(:admin, @contactpage) %></td>
+        <td><%= link_to 'Destroy', admin_contactpage_url(:admin, @contactpage), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Contactpage', new_contactpage_path %>
+<%= link_to 'New Contactpage', new_admin_contactpage_path %>

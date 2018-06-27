@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @feature.image %>
+</p>
+
+<p>
+  <strong>Titile:</strong>
+  <%= @feature.titile %>
+</p>
+
+<%= link_to 'Edit', edit_admin_feature_path(@feature) %> |
+<%= link_to 'Back', admin_features_path %>
