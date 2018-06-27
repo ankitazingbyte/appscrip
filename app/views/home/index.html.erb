@@ -64,7 +64,7 @@
 						                        	<div class="col-item2">
 												    <b><h2><%= demand.title %></h2></b><br>
 												    <%= demand.description.html_safe %><br>
-												    <button type="button" class="btn2">VIEW APP DEATAILS</button>
+												    <%= link_to home_landing_path do %><button type="button" class="btn2">VIEW APP DEATAILS</button><% end %>
 												</div>
 												</div>
 						                    </div>
@@ -100,7 +100,8 @@
 						                        	<div class="col-item2">
 												    <b><h2><%= social.title %></h2></b><br>
 												    <%= social.description.html_safe %><br>
-												    <button type="button" class="btn2">VIEW APP DEATAILS</button>
+												    <%= link_to home_landing_path do %><button type="button" class="btn2">VIEW APP DEATAILS</button>
+												    <% end %>
 												</div>
 												</div>
 						                    </div>
@@ -136,7 +137,8 @@
 						                        	<div class="col-item2">
 												    <b><h2><%= ecommerce.title %></h2></b><br>
 												    <%= ecommerce.description.html_safe %><br>
-												    <button type="button" class="btn2">VIEW APP DEATAILS</button>
+												    <%= link_to home_landing_path do %><button type="button" class="btn2">VIEW APP DEATAILS</button>
+												    <% end %>
 												</div>
 												</div>
 						                    </div>
