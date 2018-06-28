@@ -21,7 +21,11 @@
 </center>
 <center><div class="container">
   	<% @teams.each do |team| %>
-	  <div class="div2 raise col-md-3">
+<<<<<<< HEAD
+	  <div class="div2 raise col-sm-3 col-sm-offset-0">
+=======
+	  <div class="div2 raise col-md-3 col-md-offset-2">
+>>>>>>> 55c4ab092dee64bfab79b5d043ff5c87cb3c8e22
 	  	<center><%= image_tag team.image.url, class: "img-circle"%>
 	    <h3><%= team.name %></h3>
 	    <p><%= team.designation %></p></center>
