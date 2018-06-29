@@ -15,7 +15,7 @@
 			</div>
 			<div class="col-md-6">
 				<h1><%= howitwork.heading %> <%= image_tag "right.png" %></h1>
-				<p><h5><%= howitwork.body %>.</h5></p>
+				<p><h5><%= howitwork.body.html_safe %>.</h5></p>
 			</div>
 		</div>
 	<% end %>
