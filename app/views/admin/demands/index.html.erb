@@ -17,7 +17,7 @@
       <tr>
         <td><%= demand.title %></td>
         <td><%= demand.description %></td>
-        <td><%= image_tag demand.image.url %></td>
+        <td><%= image_tag demand.image.url, height: "100px" %></td>
         <td><%= link_to 'Show', admin_demand_url(demand) %></td>
         <td><%= link_to 'Edit', edit_admin_demand_path(demand) %></td>
         <td><%= link_to 'Destroy', admin_demand_url(demand), method: :delete, data: { confirm: 'Are you sure?' } %></td>
