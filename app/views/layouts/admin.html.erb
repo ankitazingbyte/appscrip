@@ -15,7 +15,7 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse" style="margin-bottom: 30px;">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#" style="margin: -15px;"><%= image_tag "logo.png" %></a>
@@ -84,18 +84,15 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-container">
+        <%= link_to "About Us", admin_aboutus_path %><br>
+        <%= link_to "New About Us", new_admin_aboutu_path %><br>
         <button class="dropdown-btn">Team 
-        <i class="fa fa-caret-down"></i>
+          <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
           <%= link_to "Teams", admin_teams_path %><br>
           <%= link_to "New Team", new_admin_team_path %><br>
         </div>
-        <%= link_to "About Us", admin_aboutus_path %><br>
-        <%= link_to "New About Us", new_admin_aboutu_path %><br>
-        </div>
-        <%= link_to "About Us", admin_aboutus_path %><br>
-        <%= link_to "New About Us", new_admin_aboutu_path %><br>
       </div>
 
       <button class="dropdown-btn">howitworks
@@ -104,7 +101,7 @@
       <div class="dropdown-container">
         <%= link_to "How It Works", admin_howitworks_path %><br>
         <%= link_to "New How It Work", new_admin_howitwork_path %><br>
-      </div>
+      </div> 
 
       <button class="dropdown-btn">Products 
         <i class="fa fa-caret-down"></i>
@@ -112,7 +109,7 @@
       <div class="dropdown-container">
         <%= link_to "Products", admin_products_path %><br>
         <%= link_to "New product", new_admin_product_path %><br>
-      </div>
+      </div> 
 
       <button class="dropdown-btn">Services
         <i class="fa fa-caret-down"></i>
@@ -126,14 +123,16 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-container">
+        <%= link_to "FAQ", admin_faqs_path %><br>
+        <%= link_to "New FAQ", new_admin_faq_path %><br>
         <button class="dropdown-btn">General
-        <i class="fa fa-caret-down"></i>
+          <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
           <%= link_to "general", admin_generals_path %><br>
           <%= link_to "New general", new_admin_general_path %><br>
           <a href="#">Link 3</a>
-        </div>
+        </div> 
 
         <button class="dropdown-btn">Licence
           <i class="fa fa-caret-down"></i>
@@ -143,17 +142,14 @@
           <%= link_to "New licence", new_admin_licence_path %><br>
           <a href="#">Link 3</a>
         </div>
+
         <button class="dropdown-btn">Payment
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
           <%= link_to "Payment", admin_payments_path %><br>
           <%= link_to "New Payment", new_admin_payment_path %><br>
-          <a href="#">Link 3</a>
         </div>
-        <%= link_to "FAQ", admin_faqs_path %><br>
-        <%= link_to "New FAQ", new_admin_faq_path %><br>
-        <a href="#">Link 3</a>
       </div>
 
       <button class="dropdown-btn">features
@@ -193,13 +189,10 @@
       <div class="dropdown-container">
         <%= link_to "Contactdetail", admin_contactpages_path %><br>
         <%= link_to "New contactdetail", new_admin_contactpage_path %><br>
-
       </div>
     </div>
     <div id="main">
-      <div class= "container">
         <%= yield %>
-      </div>
     </div>
   </body>
 </html>
