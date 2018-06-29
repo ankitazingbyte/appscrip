@@ -1,6 +1,4 @@
-<div class="container">
-	<h1>Editing Demand</h1>
-	<%= render 'form', demand: @demand %>
-	<%= link_to 'Show', admin_service_path(@demand) %> |
-	<%= link_to 'Back', admin_demands_path %>
-</div>
+<h1>Editing Demand</h1>
+<%= render 'form', demand: @demand %>
+<%= link_to 'Show', admin_demand_path(@demand) %> |
+<%= link_to 'Back', admin_demands_path %>

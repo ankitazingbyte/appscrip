@@ -1,6 +1,6 @@
 <div class="container">
 	<h1>Editing Contact</h1>
 	<%= render 'form', contact: @contact %>
-	<%= link_to 'Show', @contact %> |
+	<%= link_to 'Show', admin_contact_url(@contact) %> |
 	<%= link_to 'Back', admin_contacts_path %>
 </div>

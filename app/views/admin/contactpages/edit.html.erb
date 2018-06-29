@@ -1,6 +1,4 @@
-<div class="conatiner">		
-	<h1>Editing Contactpage</h1>
-	<%= render 'form', contactpage: @contactpage %>
-	<%= link_to 'Show', @contactpage %> |
-	<%= link_to 'Back', contactpages_path %>
-</div>
+<h1>Editing Contactpage</h1>
+<%= render 'form', contactpage: @contactpage %>
+<%= link_to 'Show', admin_contact_url(@contactpage) %> |
+<%= link_to 'Back', admin_contactpages_path %>
