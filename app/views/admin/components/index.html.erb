@@ -16,7 +16,7 @@
     <% @components.each do |component| %>
       <tr>
         <td><%= component.heading %></td>
-        <td><%= component.image %></td>
+        <td><%= image_tag component.image.url %></td>
         <td><%= component.title %></td>
         <td><%= link_to 'Show', component %></td>
         <td><%= link_to 'Edit', edit_component_path(component) %></td>

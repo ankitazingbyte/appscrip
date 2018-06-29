@@ -13,7 +13,7 @@
   <tbody>
     <% @icons.each do |icon| %>
       <tr>
-        <td><%= icon.image %></td>
+        <td><%= image_tag icon.image.url, height: "100px" %></td>
         <td><%= link_to 'Show', admin_icon_url(icon) %></td>
         <td><%= link_to 'Edit', edit_admin_icon_path(icon) %></td>
         <td><%= link_to 'Destroy', admin_icon_url(icon), method: :delete, data: { confirm: 'Are you sure?' } %></td>

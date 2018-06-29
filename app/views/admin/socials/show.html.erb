@@ -12,7 +12,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @social.image %>
+  <%= image_tag @social.image.url, height: "100px" %>
 </p>
 
 <%= link_to 'Edit', edit_admin_social_path(@social) %> |

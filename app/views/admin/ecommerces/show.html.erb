@@ -12,7 +12,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @ecommerce.image %>
+  <%= image_tag @ecommerce.image.url %>
 </p>
 
 <%= link_to 'Edit', edit_admin_ecommerce_path(@ecommerce) %> |

@@ -14,7 +14,7 @@
   <tbody>
     <% @features.each do |feature| %>
       <tr>
-        <td><%= feature.image %></td>
+        <td><%= image_tag feature.image.url, height: "100px" %></td>
         <td><%= feature.titile %></td>
         <td><%= link_to 'Show', admin_feature_url(feature) %></td>
         <td><%= link_to 'Edit', edit_admin_feature_path(feature) %></td>

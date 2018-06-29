@@ -17,7 +17,7 @@
     <% @landings.each do |landing| %>
       <tr>
         <td><%= landing.title %></td>
-        <td><%= landing.image %></td>
+        <td><%= image_tag landing.image.url, height: "100px" %></td>
         <td><%= landing.heading %></td>
         <td><%= landing.body %></td>
         <td><%= link_to 'Show', admin_landing_path(landing) %></td>

@@ -19,7 +19,7 @@
         <td><%= customer.name %></td>
         <td><%= customer.designation %></td>
         <td><%= customer.message %></td>
-        <td><%= customer.image %></td>
+        <td><%= image_tag customer.image.url, height: "100px" %></td>
         <td><%= link_to 'Show', admin_customer_path(customer) %></td>
         <td><%= link_to 'Edit', edit_admin_customer_path(customer) %></td>
         <td><%= link_to 'Destroy', admin_customer_path(customer), method: :delete, data: { confirm: 'Are you sure?' } %></td>

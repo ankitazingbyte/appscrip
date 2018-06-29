@@ -17,7 +17,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @customer.image %>
+  <%= image_tag @customer.image.url, height: "100px" %>
 </p>
 
 <%= link_to 'Edit', edit_admin_customer_path(@customer) %> |

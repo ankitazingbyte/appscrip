@@ -22,7 +22,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @howitwork.image %>
+  <%= image_tag @howitwork.image.url %>
 </p>
 
 <%= link_to 'Edit', edit_admin_howitwork_path(@howitwork) %> |

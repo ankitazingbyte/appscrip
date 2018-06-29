@@ -2,7 +2,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @icon.image %>
+  <%= image_tag @icon.image.url, height: "100px" %>
 </p>
 
 <%= link_to 'Edit', edit_admin_icon_path(@icon) %> |
