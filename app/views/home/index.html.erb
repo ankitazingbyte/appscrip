@@ -55,13 +55,13 @@
 						                    <div class="row">
 						                        <div class="col-sm-2 col-sm-offset-2">
 						                            <div class="col-item">
-						                                <div class="photo">
-						                                    <%= image_tag demand.image.url, height:"800px;" %>
+						                                <div class="photo1">
+						                                    <%= image_tag demand.image.url, height:"800px", width: "420px" %>
 						                                </div>
 						                            </div>
 						                        </div>
 						                        <div class="col-sm-6 col-sm-offset-6 sm">
-						                        	<div class="col-item2">
+						                        	<div class="col-item3">
 												    <b><h2><%= demand.title %></h2></b><br>
 												    <%= demand.description.html_safe %><br>
 												    <%= link_to home_landing_path do %><button type="button" class="btn2">VIEW APP DEATAILS</button><% end %>
@@ -83,7 +83,7 @@
                 <div role="tabpanel" class="tab-pane fade" id="Section2">
                 	<div class="container">
 					    <div class="row">
-					        <div id="carousel-example-generic1" class="carousel slide hidden-xs" data-ride="carousel">
+					       <div id="carousel-example-generic1" class="carousel slide hidden-xs" data-ride="carousel">
 					            <!-- Wrapper for slides -->
 					            <div class="carousel-inner" style="margin: -30px -195px;">
 					                <% @socials.each_with_index do |social, index| %>
@@ -92,7 +92,7 @@
 						                        <div class="col-sm-2 col-sm-offset-2">
 						                            <div class="col-item">
 						                                <div class="photo">
-						                                    <%= image_tag social.image.url, height:"800px;" %>
+						                                    <%= image_tag social.image.url, height:"800px", width: "420px" %>
 						                                </div>
 						                            </div>
 						                        </div>
@@ -100,8 +100,7 @@
 						                        	<div class="col-item2">
 												    <b><h2><%= social.title %></h2></b><br>
 												    <%= social.description.html_safe %><br>
-												    <%= link_to home_landing_path do %><button type="button" class="btn2">VIEW APP DEATAILS</button>
-												    <% end %>
+												    <%= link_to home_landing_path do %><button type="button" class="btn2">VIEW APP DEATAILS</button><% end %>
 												</div>
 												</div>
 						                    </div>
@@ -129,7 +128,7 @@
 						                        <div class="col-sm-2 col-sm-offset-2">
 						                            <div class="col-item">
 						                                <div class="photo">
-						                                    <%= image_tag ecommerce.image.url, height:"800px;" %>
+						                                    <%= image_tag ecommerce.image.url, height:"800px", width: "420px" %>
 						                                </div>
 						                            </div>
 						                        </div>
